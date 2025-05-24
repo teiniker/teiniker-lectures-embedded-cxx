@@ -1,0 +1,10 @@
+Exercise: Operator Overloading - Counter (++, --)
+--------------------------------------------------------------------------------
+
+Given the implementation of a "EEPROM" class.
+
+Add the following subscript operator to this class: 
+
+    uint8_t& operator[](const uint32_t address);
+
+Test your implementation withe the test cases implemented in test.cpp.

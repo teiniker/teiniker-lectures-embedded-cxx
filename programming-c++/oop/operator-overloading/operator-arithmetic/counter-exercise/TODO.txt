@@ -1,0 +1,13 @@
+Exercise: Operator Overloading - Counter (++, --)
+--------------------------------------------------------------------------------
+
+Given the implementation of a "Counter" class.
+
+Add the following unary operators to this class: 
+
+		void operator ++(int);	// postfix increment operator
+		void operator --(int);	// postfix decrement operator
+
+Test your implementation withe the test cases implemented in test.cpp.
+
+
