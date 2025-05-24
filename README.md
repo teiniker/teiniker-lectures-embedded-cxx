@@ -1,1 +1,2 @@
-# teiniker-lectures-cxx
+# C++ Programming by Example
+
