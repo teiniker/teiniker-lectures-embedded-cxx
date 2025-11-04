@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 find_package(GTest REQUIRED)
 
 add_executable(test test.cpp book.cpp)
-target_link_libraries(test PRIVATE GTest::GTest GTest::Main pthread)
+target_link_libraries(test PRIVATE  gtest gtest_main pthread)
