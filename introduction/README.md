@@ -75,38 +75,6 @@ Later, we will come back to restrictions and best practices for embedded
 systems development using C++.
 
 
-## Configuration Management
-
-Configuration management is crucial in embedded systems development,
-as it helps manage the complexity of different hardware platforms,
-software versions, and build environments.
-
-Configuration management tools and practices include:
-
-* **Version Control Systems (VCS)**:
-   Git is the most widely used VCS, allowing teams to track changes, 
-   collaborate, and manage code versions effectively.
-
-* **Build Systems**:
-   CMake is a popular build system that can generate Makefiles or project 
-   files for various IDEs, making it easier to manage complex builds.
-
-* **Debugging and Testing Frameworks**:
-   Tools like GDB for debugging, and Google Test for unit testing, 
-   help ensure code quality and reliability.
-
-* **Modeling and Documentation**:
-   Tools like Doxygen for generating documentation from comments in the code, 
-   and UML for modeling system architecture.
-
-* **Genarative AI**:
-    AI tools can assist in code generation, documentation, and even debugging 
-    by providing suggestions based on existing code patterns.
-    
-    We will explore how to use AI tools effectively in embedded C++
-    development, including best practices and potential pitfalls.
-
-
 ## References
 * [YouTube: Bjarne Stroustrup: Why I Created C++ ](https://youtu.be/JBjjnqG0BP8?si=ZFvZpu5uKGs23bGe)
 * Jez Humble, Davis Farley. **Continuous Delivery**. Addison-Wesley, 2010

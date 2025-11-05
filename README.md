@@ -7,6 +7,8 @@ needed to understand C++ for embedded systems.
 
 * [Configuration Management](configuration-management/)
 
+* [Software Modeling](software-modeling/README.md)
+
 * [C++ Programming](programming-c++/) 
 
 As a development environment, you can use a pre-configured Linux VM image:
