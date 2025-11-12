@@ -64,7 +64,7 @@ In C++, OOP facilitates the creation and management of complex software systems 
     the creation of hierarchical relationships, enabling developers to build 
     upon existing functionality without redundant code.
 
-    **Polymorphism** enables objects of different classes to be treated as 
+* **Polymorphism** enables objects of different classes to be treated as 
     objects of a common base class, particularly through **virtual functions**. 
     This allows for dynamic method binding, where the appropriate method 
     implementation is called based on the actual object type at runtime, 
