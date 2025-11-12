@@ -27,8 +27,8 @@ Resistor new_resistor(uint32_t value, uint8_t tolerance = 1)
 Resistor r = new_resistor(470); // tolerance = 1
 ```
 
-It's important to note that default arguments are typically specified at 
-the end of the parameter list. This means you need to first specify the 
+It's important to note that default arguments are typically specified 
+**at the end of the parameter list**. This means you need to first specify the 
 parameters without default values, followed by the parameters with 
 default values. 
 
