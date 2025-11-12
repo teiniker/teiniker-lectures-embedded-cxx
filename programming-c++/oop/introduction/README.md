@@ -108,16 +108,6 @@ Here are some diagram types which integrates OOP with UML:
     a particular sequence of operations, showcasing OOP’s runtime behavior 
     through method calls and object collaborations.
 
-* [**State Diagram**:](../../../modeling/state-machine-diagram/README.md):
-    * **Object States**: State diagrams model the various states an object can be in 
-    and the transitions between these states, aligning with OOP’s emphasis on objects 
-    having distinct states and behaviors.
-
-* **Collaboration Diagrams**:
-    * **Object Interactions**: These diagrams focus on the interactions between 
-    objects to achieve a specific functionality, highlighting OOP’s principle of 
-    objects collaborating through well-defined interfaces.
-
 UML provides a clear and standardized way to represent the static and dynamic aspects 
 of software, ultimately enhancing the efficiency and effectiveness of the software 
 development lifecycle.
@@ -130,4 +120,4 @@ development lifecycle.
 * Robert C. Martin. **Clean Code: A Handbook of Agile Software Craftsmanship.**. Pearson, 2008
 * Martin Fowler. **UML Distilled**. Addison-Wesley, 3rd Edition, 2004
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2020-2025, GPL v3.0*
