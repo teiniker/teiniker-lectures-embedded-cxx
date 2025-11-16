@@ -11,12 +11,13 @@ class Date
         int _year;
 
     public:
-        Date(int d, int m, int y);  // Constructor   
+        Date(int d, int m, int y);  // Constructor 
+
         ~Date();                    // Destructor
 
         // Getter and Setter Methods
-        int Date::day() const { return _day; }          // inline function
-        void Date::day(const int day) { _day = day; }   // inline function
+        int day() const { return _day; }          // inline method
+        void day(const int day) { _day = day; }   // inline method
 
         int month() const; 
         void month(const int m);
