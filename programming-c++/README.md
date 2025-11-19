@@ -14,8 +14,6 @@
 
   * [Classes and Objects](oop/classes)
 
-  * [Copy Constructor](oop/copy-constructor/)
-
   * [Operator Overloading](oop/operator-overloading/)
 
   * [Inheritance and Abstract Classes](oop/inheritance/)
