@@ -25,8 +25,8 @@ TEST(EventTestGroup, DateTest)
 
 TEST(EventTestGroup, EventTest)
 {
-    Event event = Event("SW Design Lecture", 1, 4, 2020, 8, 45); // sec=0
+    Event event = Event("SW Design Lecture", 1, 4, 2024, 8, 45); // sec=0
     
     // Verify
-    EXPECT_EQ("Event{'SW Design Lecture': Date[01.04.2020] Time[08:45:00]}", event.to_string());
+    EXPECT_EQ("Event{'SW Design Lecture': Date[01.04.2024] Time[08:45:00]}", event.to_string());
 }
