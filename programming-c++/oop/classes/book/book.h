@@ -6,25 +6,30 @@
 
 class Book 
 {
-    private:
-        std::string _title;
-        std::string _author;
-        std::string _isbn;
+private:
+    std::string _title;
+    std::string _author;
+    std::string _isbn;
 
-    public:
-        Book(const std::string& title, const std::string& author, const std::string& isbn);
+public:
+    // Initializing Constructor
+    Book(const std::string& title, const std::string& author, const std::string& isbn);
 
-        ~Book() = default;  // Default destructor
+    // Copy Constructor
+    Book(const Book &book) = default;
 
-        // Getter and Setter Methods
-        std::string title() const { return _title; }                // inline method
-        void title(const std::string& title) { _title = title; }    // inline method
+    // Default destructor
+    ~Book() = default;  
 
-        std::string author() const { return _author; }                // inline method
-        void author(const std::string& author) { _author = author; }  // inline method
+    // Getter and Setter Methods
+    std::string title() const { return _title; }                // inline method
+    void title(const std::string& title) { _title = title; }    // inline method
 
-        std::string isbn() const { return _isbn; }                  // inline method
-        void isbn(const std::string& isbn) { _isbn = isbn; }        // inline method
+    std::string author() const;
+    void author(const std::string& author);
+
+    std::string isbn() const;
+    void isbn(const std::string& isbn);
 };
 
 #endif // _BOOK_H_

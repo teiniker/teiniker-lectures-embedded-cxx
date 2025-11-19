@@ -5,5 +5,20 @@ Book::Book(const std::string& title, const std::string& author, const std::strin
 {
 }
 
+std::string Book::author() const 
+{ 
+    return _author; 
+}                
+void Book::author(const std::string& author) 
+{ 
+    _author = author; 
+}  
 
-    
+std::string Book::isbn() const 
+{ 
+    return _isbn; 
+}                  
+void Book::isbn(const std::string& isbn) 
+{ 
+    _isbn = isbn; 
+}        

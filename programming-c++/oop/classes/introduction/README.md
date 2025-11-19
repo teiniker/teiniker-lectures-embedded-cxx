@@ -24,33 +24,48 @@ Classes are the central feature of an **object oriented language**.
 In C++ a **class** is a user-defined type that has **attributes** 
 (data members) and **methods** (member functions). 
 
-_Example_: C++ class declaration (`date.h`)
+_Example_: C++ class declaration (`book.h`)
 ```C++
-class Date 
+class Book 
 {
-    private:
-        int _day;
-        int _month;
-        int _year;
+private:
+    // Private fields
+    std::string _title;
+    std::string _author;
+    std::string _isbn;
 
-    public:
-        Date(int d, int m, int y);  // Constructor   
-        ~Date();                    // Destructor
+public:
+    // Initializing Constructor
+    Book(const std::string& title, const std::string& author, const std::string& isbn);
 
-        // Getter and Setter Methods
-        int Date::day() const { return _day; }          // inline function
-        void Date::day(const int day) { _day = day; }   // inline function
+    // Copy Constructor
+    Book(const Book &book) = default;
 
-        int month() const; 
-        void month(const int m);
-        
-        int year() const;
-        void year(const int y);
+    // Default destructor
+    ~Book() = default;  
 
-        // Operations
-        bool isLeapYear();
+    // Getter and Setter Methods
+    std::string title() const { return _title; }                // inline method
+    void title(const std::string& title) { _title = title; }    // inline method
+    
+    std::string author() const; 
+    void author(const std::string& author);
+
+    std::string isbn() const;
+    void isbn(const std::string& isbn);
+
+    // Methods
 };
 ``` 
+
+Note that the operations marked as `=default`could be skipped - in both 
+cases the compiler will generate the operations for us.
+
+An explicit use of `=default` has the benefits:
+* **Explicit control** over whether the function exists
+* Ability to change **visibility** (public/private/protected)
+* Clear **documentation** to readers that this special member exists intentionally
+
 
 ### Access Control
 
@@ -79,14 +94,14 @@ There are three different types of constructurs in C++:
     If we do not define any constructor explicitly, the compiler will 
     automatically provide a default constructor implicitly.    
 
-    _Example_: `Date()`
+    _Example_: `Book(void)`
     
 * **Parameterized Constrcutors:**
     It is possible to pass arguments to constructors. These arguments 
     help initialize an object when it is created. Note that constructors 
     also can be overloaded.        
 
-    _Example_: `Date(int d, int m, int y)`
+    _Example_: `Book(const std::string& title, const std::string& author, const std::string& isbn)`
 
 * **Copy Constructors:**
     A copy constructor is a member function which initializes an object 
@@ -98,7 +113,7 @@ There are three different types of constructurs in C++:
     pointers or any runtime allocation of the resource like file handle, 
     a network connection etc. (**deep copy**).        
     
-    _Example_: `Date(const Date &date)`
+    _Example_: `Book(const Book &book)`
     
 Like functions, **constructors can be overloaded** if they differ in their 
 parameter lists.    
@@ -115,7 +130,7 @@ Destructors have same name as the class preceded by a tilde `~`,
 Note that there can only be one destructor in a class.
 
 ```C++
-    ~Date();
+    ~Book() = default; 
 ```     
 
 If we do not write our own destructor in class, compiler creates a 
@@ -141,14 +156,22 @@ const-correctness.
 the state of an object are explicitly marked, enhancing code safety and 
 readability.
 
-* `int Date::day() const`: Indicates that the `day()` member function is 
+* `std::string title() const`: Indicates that the `title()` member function is 
     a **constant member function**. Specifically, it promises not to modify 
-    any member variables of the `Date` object (unless those members are marked 
+    any member variables of the `Book` object (unless those members are marked 
     as mutable).
 
-* `void Date::day(const int day)`: This marks the parameter day as a constant 
-    within the function, meaning that within the function body, **we cannot 
-    modify the value of `day`**.
+* `void title(const std::string& title)`: This marks the parameter `title` 
+    as a constant reference, meaning that within the function body, **we cannot 
+    modify the value of `title`**.
+
+All the member functions defined inside the class declaration are 
+by default **inline**, but we can also make any non-class function 
+inline by using keyword `inline` with them. 
+
+Inline functions are actual functions, which are copied everywhere 
+during compilation, like pre-processor macro, so the overhead of 
+function calling is reduced.
 
 
 ## Class Implementation
@@ -158,39 +181,34 @@ readability.
 We **separate the declaration and the implementation of methods** (header 
 and source file).
 
-_Example_: C++ class implementation (`date.cpp`)
+_Example_: C++ class implementation (`book.cpp`)
 ```C++
-Date::Date(int day, int month, int year) 
-    : _day{day}, _month{month}, _year{year}   
+Book::Book(const std::string& title, const std::string& author, const std::string& isbn)
+    : _title{title}, _author{author}, _isbn{isbn}
 {
 }
 
-Date::~Date() 
-{
-}
+std::string Book::author() const 
+{ 
+    return _author; 
+}                
+void Book::author(const std::string& author) 
+{ 
+    _author = author; 
+}  
 
-int Date::month() const { return _month; }
-void Date::month(const int month) { _month = month; }
-
-int Date::year() const { return _year; }
-void Date::year(const int year) { _year = year; }
-
-bool Date::isLeapYear()
-{
-    return (_year % 4 == 0 && _year % 100 != 0) || (_year % 400 == 0);
-}
+std::string Book::isbn() const 
+{ 
+    return _isbn; 
+}                  
+void Book::isbn(const std::string& isbn) 
+{ 
+    _isbn = isbn; 
+}        
 ```
 
 When we implement methods outside a class declaration we use the 
 **scope resolution :: operator**.
-
-All the member functions defined inside the class declaration are 
-by default **inline**, but we can also make any non-class function 
-inline by using keyword `inline` with them. 
-
-Inline functions are actual functions, which are copied everywhere 
-during compilation, like pre-processor macro, so the overhead of 
-function calling is reduced.
 
 
 ## Objects (Class Instances)
@@ -206,17 +224,17 @@ type. Note that the methods can be called directly on these instances using
 the **dot notation**.
 
 ```C++
-TEST(DateTest, Constructor) 
+TEST(BookTest, Constructor) 
 {
-    Date birthday(23, 6, 1912); // Alan Turing's date of birth
+    Book book("1984", "George Orwell", "978-3730614389");
 
-    EXPECT_EQ(23, birthday.day());
-    EXPECT_EQ(6, birthday.month());
-    EXPECT_EQ(1912, birthday.year());
+    EXPECT_EQ("1984", book.title());
+    EXPECT_EQ("George Orwell", book.author());
+    EXPECT_EQ("978-3730614389", book.isbn());
 }
 ``` 
-These objects are created on the stack and go out of scope at the end of 
-a method or function.
+Such a `Book` object is **created on the stack** and go out of scope 
+at the end of a method or function.
 
 
 ### Objects on the Heap
@@ -227,53 +245,23 @@ To delete objects from the heap, we use the **delete operator**.
 Note that **all objects on the heap must be deleted manually** using delete.
 
 ```C++
-TEST(DateTest, ConstructorWithNew) 
+TEST(BookTest, ConstructorWithNew) 
 {
-    Date* birthday = new Date(23, 6, 1912);
+    Book* book = new Book("1984", "George Orwell", "978-3730614389");
 
-    EXPECT_EQ(23, birthday->day());
-    EXPECT_EQ(6, birthday->month());
-    EXPECT_EQ(1912, birthday->year());
+    EXPECT_EQ("1984", book->title());
+    EXPECT_EQ("George Orwell", book->author());
+    EXPECT_EQ("978-3730614389", book->isbn());
 
-    delete birthday;
+    delete book;
 }
 ``` 
 
 The `new` operator returns a pointer to the created object, thus, 
 the members of an object are accessed with the **arrow operator**.
 
-
-
-## Examples and Exercises
-
-The following examples and exercises are intended to further clarify the concepts surrounding classes:
-
-* **Classes and Objects** 
-    * Example: [date](date/)
-    * Example: [book](book/)
-    * Exercise: [resistor](resistor-exercise/) ([Model Solution](resistor/))
-    * Exercise: [can-message](can-message-exercise/) ([Model Solution](can-message/))
-
-* **Constructor and Destructor**
-    * Exercise: [eeprom](eeprom-exercise/) ([Model Solution](eeprom/))
-    * Exercise: [lcd](lcd-exercise/) ([Model Solution](lcd/))
-
-* **Static Members**
-    * Example: [integer-sequence](integer-sequence/)
-
-* **Directed Associations**
-    * Example: [order-directed](order-directed/)
-    * Exercise: [user-mail-directed](user-mail-directed-exercise/) ([Model Solution](user-mail-directed/))
-    * Exercise: [user-table](user-table-exercise/) ([Model Solution](user-table/))
-    * Exercise: [linked-stack](linked-stack-exercise/) ([Model Solution](linked-stack/))
-
-
-* **Bidirectional Associations**
-    * Example: [directory-bidirectional](directory-bidirectional/)
-    * Exercise: [user-mail-bidirectional](user-mail-bidirectional-exercise//) ([Model Solution](user-mail-bidirectional/))
-
-* **Composition**
-    * Example: [event](event/)
+Remember to **delete** any objects you allocate with new to avoid memory leaks 
+(use delete for single objects, delete[] for arrays). 
 
 
 ## References
@@ -289,4 +277,4 @@ Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 
 [Destructors in C++](https://www.geeksforgeeks.org/destructors-c/)
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*
