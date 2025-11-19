@@ -31,5 +31,9 @@ surrounding classes, objects, and their relationships:
 * **Composition**
     * Example: [event](composition/event/)
 
+* **Copy Constructor**
+    * [Introduction](introduction/README.md)
+    * Example: [user-mail](copy-constructor/user-mail/)
+    * Exercise: [order](copy-constructor/order-exercise/) ([Model Solution](copy-constructor/order/))
 
 *Egon Teiniker, 2024-2025, GPL v3.0*
