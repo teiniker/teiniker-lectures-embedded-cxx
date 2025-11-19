@@ -46,6 +46,11 @@ printf("c = %3.2f + j%3.2f\n", c.re, c.im);
 
 The `using namespace` enables us to omit the namespace qualification.
 
+The `using namespace` directive should **only be used in implementation files** 
+(`*.cpp` files). In header files, namespaces should always be part of the qualified 
+type name (e.g. `std::string`).
+
+
 Use of a namespace is idiomatic C++ and is a **zero-overhead abstraction**. 
 Just like the rest of a type’s identifiers, the namespace is erased by the 
 compiler when emitting assembly code. 
@@ -59,4 +64,4 @@ In large projects, it’s incredibly helpful for **separating code in different 
 * Josh Lospinoso. **C++ Crash Course**. No Starch Press, 2019 
     * Chapter: Upgrading to Super C 
 
-*Egon Teiniker, 2020-2023, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*
