@@ -37,20 +37,10 @@ _Figure: Shallow Copy vs. Deep Copy_
 In a user defined copy constructor, we make sure that pointers (or references) 
 of copied object point to new memory locations.
 	
-
-## Examples and Exercises
-
-The following examples and exercises are intended to clarify the concept 
-of copy constructures and deep copy:
-
-* Example: [user](user/)
-* Exercise: [order](order-exercise/) ([Model Solution](order/))
-
-
 ## References
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 * Chapter 3.3: Copy and Move
 
 [Copy Constructor in C++](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*
