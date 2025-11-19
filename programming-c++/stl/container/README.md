@@ -10,9 +10,29 @@ making them highly versatile and reusable.
 STL containers come in three main categories, each designed for specific 
 data handling scenarios:
 
+* **Fixed-Size Value Containers**
+
+    * [std::optional](optional/):
+        Represents a value that may or may not exist, giving you a type-safe 
+        way to express “maybe a value” without using nulls or special 
+        sentinel values.
+
+    * `std::pair`:
+        Bundles two values—potentially of different types—into a single 
+        lightweight object that behaves like a simple two-field struct.
+
+    * `std::tuple`:
+        Groups an arbitrary number of values of potentially different types 
+        into one fixed-size, index-accessible object.
+
+
 * **Sequence Containers**
 
     Sequence containers **store elements in a linear order**, allowing sequential access and insertion. 
+
+    * [std::array](array/): 
+        A lightweight, fixed-size, stack-allocated container that behaves 
+        like a safer, STL-friendly replacement for a raw C array.
 
     * [std::vector](vector/): 
         A dynamic array that can grow and shrink in size. 
@@ -89,9 +109,6 @@ The choice of container depends on:
 * The type of data you are working with.
 * The performance characteristics you need (e.g., fast insertion, random access).
 * Whether duplicates or ordered storage are important.
-
-
-## References
 
 
 *Egon Teiniker, 2020-2024, GPL v3.0*

@@ -1,4 +1,6 @@
-# std::optional
+# std::optional 
+
+Many embedded developers use **explicit error handling** instead.
 
 `std::optional` basically a tiny container that can hold:
 * a **value of some type T**, or
