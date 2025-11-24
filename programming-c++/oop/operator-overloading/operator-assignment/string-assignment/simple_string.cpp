@@ -3,7 +3,7 @@
 
 using namespace std;
 
-String::String(const char* data)
+SimpleString::SimpleString(const char* data)
 {
 	_size = 0;
 	while (data[_size] != '\0')
@@ -20,7 +20,7 @@ String::String(const char* data)
 }
 
 // Copy Constructor
-String::String(const String& old)
+SimpleString::SimpleString(const SimpleString& old)
 {
 	printf(">> Called: Copy Constructor\n");
 
@@ -33,13 +33,13 @@ String::String(const String& old)
 	_data[_size] = '\0';
 }
 
-String::~String()
+SimpleString::~SimpleString()
 {
 	delete[] _data;
 }
 
 // Assignment Operator
-String& String::operator=(const String& other)
+SimpleString& SimpleString::operator=(const SimpleString& other)
 {
 	printf(">> Called: Assignment Operator\n");
 

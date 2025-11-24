@@ -1,24 +1,21 @@
-#ifndef _STRING_H_
-#define _STRING_H_
+#ifndef _SIMPLESTRING_H_
+#define _SIMPLESTRING_H_
 
 #include <cstddef>
 
-class String 
+class SimpleString 
 {
 private:
 	size_t _size;
 	char* _data;
 	
 public:                
-	// Initializer Constructor
-	String(const char* data);
-	// Copy Constructor
-	String(const String& old);
-	// Destructor 
-	~String();
+	SimpleString(const char* data);
+	SimpleString(const SimpleString& old);
+	~SimpleString();
 		
 	// Assignment Operator
-	String& operator=(const String& other);
+	SimpleString& operator=(const SimpleString& other);
 	
  	size_t size() const
 	{
@@ -31,4 +28,4 @@ public:
 	}
 };
 
-#endif //_STRING_H_
+#endif //_SIMPLESTRING_H_

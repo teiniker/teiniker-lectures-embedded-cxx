@@ -9,7 +9,7 @@ using namespace std;
 TEST(StringTests, Constructor) 
 {
     // Setup and exercise
-    String str("hello");
+    SimpleString str("hello");
     
     // Verify 
     EXPECT_EQ(5, str.size());
@@ -19,10 +19,10 @@ TEST(StringTests, Constructor)
 TEST(StringTests, CopyConstructor) 
 {
     // Setup
-    String original("world");
+    SimpleString original("world");
     
     // Exercise
-    String copy = original;  // Calls copy constructor
+    SimpleString copy = original;  // Calls copy constructor
     
     // Verify
     EXPECT_EQ(original.size(), copy.size());
@@ -32,8 +32,8 @@ TEST(StringTests, CopyConstructor)
 TEST(StringTests, AssignmentOperator) 
 {
     // Setup
-    String str1("first");
-    String str2("second");
+    SimpleString str1("first");
+    SimpleString str2("second");
     
     // Exercise
     str1 = str2;  // Calls assignment operator
@@ -41,4 +41,17 @@ TEST(StringTests, AssignmentOperator)
     // Verify
     EXPECT_EQ(str2.size(), str1.size());
     EXPECT_STREQ(str2.c_str(), str1.c_str());    
+}
+
+TEST(StringTests, SelfAssignment) 
+{
+    // Setup
+    SimpleString str("self");
+    
+    // Exercise
+    str = str;  // Self-assignment
+    
+    // Verify
+    EXPECT_EQ(4, str.size());
+    EXPECT_STREQ("self", str.c_str());    
 }
