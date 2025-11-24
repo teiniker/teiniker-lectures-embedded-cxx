@@ -130,7 +130,9 @@ cornerstone of C++ STL containers.
 
 ## References
 
+* [YouTube (The Cherno): Dynamic Arrays in C++ (std::vector)](https://youtu.be/PocJ5jXv8No?si=1ihpPKM9jZH1yFJV)
+* [YouTube (The Cherno): Optimizing the usage of std::vector in C++](https://youtu.be/HcESuwmlHEY?si=BJBahYyDkku3lcyi)
+
 * [C++ Reference: vector](https://en.cppreference.com/w/cpp/container/vector)
 
-
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*
