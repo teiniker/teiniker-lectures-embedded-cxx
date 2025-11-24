@@ -5,6 +5,16 @@
 
 using namespace std;
 
+void print_string_by_reference(const String& str)
+{
+	printf("String data: %s, size: %zu\n", str.c_str(), str.size());
+}
+
+void print_string_by_value(String str)
+{
+	printf("String data: %s, size: %zu\n", str.c_str(), str.size());
+}
+
 TEST(StringTests, Constructor) 
 {
     // Setup and exercise
@@ -43,4 +53,22 @@ TEST(StringTests, IndependentCopies)
     // Verify that copy remains unchanged
     EXPECT_STREQ("independent", copy.c_str());
     EXPECT_STREQ("Xndependent", original.c_str());
+}
+
+TEST(StringTests, PassByReference) 
+{
+    // Setup
+    String str("reference");
+    
+    // Exercise & Verify
+    print_string_by_reference(str);
+}
+
+TEST(StringTests, PassByValue) 
+{
+    // Setup
+    String str("value");
+    
+    // Exercise & Verify
+    print_string_by_value(str);
 }

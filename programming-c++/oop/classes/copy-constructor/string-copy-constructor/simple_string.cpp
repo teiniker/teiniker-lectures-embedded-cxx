@@ -1,4 +1,5 @@
 #include <simple_string.h>
+#include <cstdio>
 
 using namespace std;
 
@@ -21,6 +22,8 @@ String::String(const char* data)
 // Copy Constructor
 String::String(const String& old)
 {
+	printf(">> Called: Copy Constructor\n");
+
 	_size = old._size;
 	_data = new char[_size + 1];
 	for (size_t i = 0; i < _size; i++)
@@ -29,7 +32,6 @@ String::String(const String& old)
 	}
 	_data[_size] = '\0';
 }
-
 
 String::~String()
 {
