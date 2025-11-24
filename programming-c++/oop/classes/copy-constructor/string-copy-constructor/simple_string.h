@@ -1,18 +1,21 @@
-#ifndef _STRING_H_
-#define _STRING_H_
+#ifndef _SIMPLESTRING_H_
+#define _SIMPLESTRING_H_
 
 #include <cstddef>
 
-class String 
+class SimpleString 
 {
 private:
 	size_t _size;
 	char* _data;
 	
 public:                
-	String(const char* data);
-	String(const String& old); // Copy Constructor
-	~String();
+	SimpleString(const char* data);
+
+	 // Copy Constructor
+	SimpleString(const SimpleString& old);
+	
+	~SimpleString();
 		
  	size_t size() const
 	{
@@ -25,4 +28,4 @@ public:
 	}
 };
 
-#endif //_STRING_H_
+#endif //_SIMPLESTRING_H_
