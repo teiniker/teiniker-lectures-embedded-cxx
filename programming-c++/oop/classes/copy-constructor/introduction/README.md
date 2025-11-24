@@ -38,9 +38,12 @@ In a user defined copy constructor, we make sure that pointers (or references)
 of copied object point to new memory locations.
 	
 ## References
-Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
-* Chapter 3.3: Copy and Move
+* [YouTube (The Cherno): Copying and Copy Constructors in C++](https://youtu.be/BvR1Pgzzr38?si=KV0lla4JJR2zheYC)
 
-[Copy Constructor in C++](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
+* [Copy Constructor in C++](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
+
+* Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
+    - Chapter 3.3: Copy and Move
+
 
 *Egon Teiniker, 2024-2025, GPL v3.0*
