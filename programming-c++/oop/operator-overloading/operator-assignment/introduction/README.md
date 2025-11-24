@@ -31,6 +31,9 @@ the member function is currently being invoked.
 * Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
     * Chapter 3.3: Copy and Move
 
+* Josh Lospinoso. **C++ Crash Course**. No Starch Press. 2019
+    - Chapter 4: The Object Life Cycle
+    
 * [Overloading the assignment operator](https://www.learncpp.com/cpp-tutorial/9-14-overloading-the-assignment-operator/)
 
 *Egon Teiniker, 2020-2024, GPL v3.0*

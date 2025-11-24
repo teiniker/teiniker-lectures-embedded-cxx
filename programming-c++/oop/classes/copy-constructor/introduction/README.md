@@ -42,6 +42,9 @@ of copied object point to new memory locations.
 
 * [Copy Constructor in C++](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
 
+* Josh Lospinoso. **C++ Crash Course**. No Starch Press. 2019
+    - Chapter 4: The Object Life Cycle
+    
 * Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
     - Chapter 3.3: Copy and Move
 
