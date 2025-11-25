@@ -1,6 +1,6 @@
 # Example: Assignment Operator for Simple String Class 
 
-IN this example, the assignment operator turns our object into a deep 
+In this example, the assignment operator turns our object into a deep 
 copy of the other String, safely and correctly, avoiding:
 * Memory leaks
 * Double-deletes
