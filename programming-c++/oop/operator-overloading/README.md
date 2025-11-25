@@ -15,7 +15,7 @@
         ([Model Solution](operator-arithmetic/counter/))
 
 * **Relational and Logical Operators**:
-    * Example: [string-relational](operator-relational/string-relational/)
+    * Example: [string-relational](operator-relational/string-compare/)
     * Example: [range](operator-relational/range/)
 
 * **Subscript Operators**
