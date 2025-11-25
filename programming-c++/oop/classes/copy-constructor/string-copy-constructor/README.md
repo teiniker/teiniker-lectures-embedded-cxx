@@ -1,17 +1,19 @@
-# Example: Simple String 
+# Example: Simple String Class With Copy Constructor
 
 Let’s build a minimal String class that manages its own heap-allocated C-style character buffer.
 
 ```C++
-class String 
+class SimpleString 
 {
     private:
 	size_t _size;
 	char* _data;
 	
-public:                
-	String(const char* data);
-	~String();
+public:    
+	// Constrcutor
+	SimpleString(const char* data);
+	// Destructor
+	~SimpleString();
 		
     // Accessors     
  	size_t size() const { return _size; }
@@ -23,7 +25,7 @@ The **constructor** takes a C-style string (`const char*`) and turns it into our
 own `String` object.
 
 ```C++
-String::String(const char* data)
+SimpleString::SimpleString(const char* data)
 {
 	_size = 0;
 	while (data[_size] != '\0')
@@ -57,7 +59,7 @@ String::String(const char* data)
     the terminator goes.
 
 
-Our custom `String` class uses `new[]` in the constructor to allocate 
+Our custom `SimpleString` class uses `new[]` in the constructor to allocate 
 a dynamic character buffer, so the **destructor**’s whole job is basically 
 to clean up after that allocation.
 
@@ -70,18 +72,26 @@ String::~String()
 
 * Releases the memory that was allocated for the string’s internal character array.
 
+The `SimpleString` class owns a resource (the memory pointed to by buffer) which must 
+be released when it’s no longer needed. The destructor contains a single line that 
+deallocates buffer. Because we have **paired the allocation and deallocation** of buffer 
+with the constructor and destructor of `SimpleString`, we will **never leak the storage**.
+
+This pattern is called **Resource Acquisition is Initialization (RAII)**.
+
+
 ## Copy Constructor
 
-_Example:_ Create a copy of the String object 
+_Example:_ Create a copy of the SimpleString object 
 
 ```C++
-TEST(StringTests, CopyConstructor) 
+TEST(SimpleStringTests, CopyConstructor) 
 {
     // Setup
-    String original("world");
+    SimpleString original("world");
     
     // Exercise
-    String copy = original;  // Calls copy constructor
+    SimpleString copy = original;  // Calls copy constructor
     
     // Verify
     EXPECT_EQ(original.size(), copy.size());
@@ -89,23 +99,24 @@ TEST(StringTests, CopyConstructor)
 }
 ```
 
-In this test case, a copy of the original String is made.
-The compiler will generate a default copy constructor for us, which makes 
-a shallow copy of the String object's data (also the `char* _data`).
+In this test case, a **copy of the original String is made**.
+
+The compiler will generate a **default copy constructor** for us, which makes 
+a **shallow copy** of the `SimpleString` object's data (also the `char* _data`).
 
 ```C++
-String(const String& old) = default;    // Use default copy constructor
+SimpleString(const SimpleString& old) = default;    // Use default copy constructor
 ```
 
-Wenn both instances go out of scope, the application will crash because 
+**When both instances go out of scope, the application will crash** because 
 both destructors will delete the `_data` on the heap. 
 
-So, we have to implement our own **copy constructor**.
-We want a **deep copy** of the original String, not just another pointer 
-to the same memory.
+Therefore, we have to implement our own **copy constructor**, because
+we want a **deep copy** of the original `SimpleString`, not just another 
+pointer to the same memory.
 
 ```C++
-String::String(const String& old)
+SimpleString::SimpleString(const SimpleString& old)
 {
 	_size = old._size;
 
@@ -125,6 +136,8 @@ String::String(const String& old)
 * Copy the actual characters: One-by-one copying.
 
 * Null-terminate the new string
+
+Now that we have a proper copy constructor, the test will pass successfully.
 
 
 *Egon Teiniker, 2024-2025, GPL v3.0*

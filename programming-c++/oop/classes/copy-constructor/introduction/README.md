@@ -24,7 +24,7 @@ copy away in certain cases.
 If we don’t define our own copy constructor, the C++ compiler creates a 
 **default copy constructor** for each class which does a member-wise copy 
 between objects.
-Default constructor does only **Shallow Copy**.
+Default copy constructor does only **Shallow Copy**.
 	 
 We need to define our own copy constructor only if an object has pointers 
 or any runtime allocation of resources.
