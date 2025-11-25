@@ -189,8 +189,8 @@ There are two primary ways to overload operators:
 
 
 ## References
-Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
-* Chapter 18: Operator Overloading
+* Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
+    * Chapter 18: Operator Overloading
 
 * [Operator Overloading in C++](https://www.geeksforgeeks.org/operator-overloading-c/)
 
