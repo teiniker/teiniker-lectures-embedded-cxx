@@ -49,8 +49,8 @@ SimpleString SimpleString::operator+(const SimpleString& other) const
 {
 	size_t newSize = _size + other._size;
 	char* newData = new char[newSize + 1];
-	std::strcpy(newData, _data);
-	std::strcat(newData, other._data);
+	strcpy(newData, _data);
+	strcat(newData, other._data);
 	return SimpleString(newData);
 }	
 
@@ -58,8 +58,8 @@ SimpleString& SimpleString::operator+=(const SimpleString& other)
 {
 	size_t newSize = _size + other._size;
 	char* newData = new char[newSize + 1];
-	std::strcpy(newData, _data);
-	std::strcat(newData, other._data);
+	strcpy(newData, _data);
+	strcat(newData, other._data);
 
 	delete[] _data;		
 
