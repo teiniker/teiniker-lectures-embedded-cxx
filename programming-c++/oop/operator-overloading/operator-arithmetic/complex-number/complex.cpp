@@ -5,15 +5,12 @@ Complex::Complex(double re, double im)
 {
 }	
 
-double Complex::real(void) const
+Complex::Complex(const Complex& c)
+	: _re{c._re}, _im{c._im}
 {
-	return _re;
+	// No deep copy needed as no dynamic memory is used
 }
 
-double Complex::imag(void) const
-{
-	return _im;	
-}
 
 Complex Complex::operator +(const Complex& c)
 {
