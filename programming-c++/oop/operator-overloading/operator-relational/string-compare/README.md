@@ -1,13 +1,11 @@
 # Example: Relational Operators for Simple String Class 
 
-In this example, the different relational operators are implemented  
-to allow comparison of instances of the `SimpleString` class with  
-each other. 
-
+In this example, various relational operators are implemented 
+to enable comparisons between SimpleString instances.
 
 ## Relational Operators
 
-The implementation uses the C string functions from `string.h`:
+These implementations uses the C string functions from `string.h`:
 
 ```C++
 bool SimpleString::operator==(const SimpleString& other) const
@@ -56,16 +54,16 @@ bool SimpleString::operator>=(const SimpleString& other) const
 * `operator>=`: This is the opposite of `<`.
 
 
-**Note that we cannot use = default for these operators!**
-
+**Note that we cannot use `=default` for these operators**:
 The default (`=default`) relational operators don’t work for custom string 
 classes because the compiler only compares member variables, not the content 
 those members point to.
 
-So implementing them manually is required!
+Therefore, **implementing them manually is required**!
 
 
-_Example:_ Compare `SimpleString` objects
+_Example:_ Perform comparisons between `SimpleString` objects
+
 ```C++
 TEST(RelationalOperatorTests, EqualityOperator)
 {
