@@ -21,15 +21,4 @@ TEST(StringIndexOperatorTests, TestWriteIndexing)
     EXPECT_STREQ(str.c_str(), "hello");
 }
 
-TEST(StringIndexOperatorTests, TestOutOfBoundsIndexing)
-{
-    SimpleString str("Test");
-    char ch = str[10];
-    EXPECT_EQ(ch, 't'); // Should return last character as fallback
-
-    const SimpleString constStr("Const");
-    // Const out-of-bounds access
-    const char constCh = constStr[10];
-    EXPECT_EQ(constCh, 't'); // Should return last character as fallback
-}
 

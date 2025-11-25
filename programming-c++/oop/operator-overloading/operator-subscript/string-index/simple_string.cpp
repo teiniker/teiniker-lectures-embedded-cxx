@@ -40,23 +40,13 @@ SimpleString& SimpleString::operator=(const SimpleString& other)
 	return *this;
 }
 
-// Indexing Operator
+// Indexing Operators
 char& SimpleString::operator[](size_t index)
 {
-	if (index >= _size)
-	{
-		printf(">> Error: Index out of bounds in non-const operator[]\n");
-		return _data[_size - 1]; // Return last character as a fallback
-	}
 	return _data[index];
 }
 
 const char& SimpleString::operator[](size_t index) const
 {
-	if (index >= _size)
-	{
-		printf(">> Error: Index out of bounds in const operator[]\n");
-		return _data[_size - 1]; // Return last character as a fallback
-	}
 	return _data[index];
 }
