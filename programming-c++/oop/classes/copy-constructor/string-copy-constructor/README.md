@@ -1,4 +1,4 @@
-# Example: Simple String Class With Copy Constructor
+# Example: Copy Constructor for Simple String Class 
 
 Let’s build a minimal String class that manages its own heap-allocated C-style character buffer.
 
