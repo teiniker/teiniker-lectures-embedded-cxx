@@ -10,7 +10,7 @@ DataService::DataService(FileService* fservice)
 {
 }
 
-vector<int> DataService::readData()
+vector<int> DataService::readData() 
 {
 	try
 	{

@@ -22,17 +22,17 @@ User::User(const int id, const string& username, const string& password)
 	_password = password;
 }
 	
-int User::id()
+int User::id() const
 {
 	return _id;
 }
 		
-string User::username(void)
+string User::username() const
 {
 	return _username;
 }
 		
-string User::password()
+string User::password() const
 {
 	return _password;
 }

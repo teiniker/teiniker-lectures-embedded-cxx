@@ -13,9 +13,9 @@ class User
 	public:                
 		User(const int id, const std::string& username, const std::string& password);
 
-		int id();
-		std::string username(void);
-		std::string password();
+		int id() const;
+		std::string username() const;
+		std::string password() const;
  };
 
 #endif /*_USER_H_ */

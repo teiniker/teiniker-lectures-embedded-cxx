@@ -15,7 +15,7 @@ FileService::FileService(const string& filename)
 	_filename = filename;	
 }
 
-string FileService::readFile()
+string FileService::readFile() const
 {
 	ifstream file(_filename.c_str());	
 	if(!file)

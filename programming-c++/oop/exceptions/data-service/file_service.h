@@ -26,7 +26,7 @@ class FileService
 	public:                
 		FileService(const std::string& filename);
 
-		std::string readFile();
+		std::string readFile() const;
 		void writeFile(const std::string& content);
  };
 
