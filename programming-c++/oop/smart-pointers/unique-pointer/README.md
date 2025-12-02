@@ -7,11 +7,11 @@ These objects have the ability of taking ownership of a pointer: once they
 take ownership they manage the pointed object by becoming responsible for 
 its deletion at some point.
 
-unique_ptr objects **automatically delete** the object they manage as soon as 
+`unique_ptr` objects **automatically delete** the object they manage as soon as 
 they themselves are destroyed, or as soon as their value changes either 
-by an assignment operation or by an explicit call to unique_ptr::reset.
+by an assignment operation or by an explicit call to `unique_ptr::reset`.
 
-A unique_ptr object has two components:
+A `unique_ptr` object has two components:
 * A **stored pointer**: the pointer to the object it manages. This is set 
 	on construction, can be altered by an assignment operation or by calling 
 	member reset, and can be individually accessed for reading using members 
@@ -22,9 +22,9 @@ A unique_ptr object has two components:
 	It is set on construction, can be altered by an assignment operation, 
 	and can be individually accessed using member get_deleter.
 
-unique_ptr objects replicate a limited pointer functionality by providing 
-access to its managed object through operators * and -> (for individual 
-objects), or operator [] (for array objects). 
+`unique_ptr` objects replicate a limited pointer functionality by providing 
+access to its managed object through operators `*` and `->` (for individual 
+objects), or operator `[]` (for array objects). 
 
 For safety reasons, they **do not support pointer arithmetics**, and only support 
 move assignment (disabling copy assignments).
@@ -53,4 +53,4 @@ TEST(MailTestGroup, UniquePointerTest)
 
 * [C++11 Smart Pointer – Part 6 : unique_ptr<> Tutorial and Examples](https://thispointer.com/c11-unique_ptr-tutorial-and-examples/)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*

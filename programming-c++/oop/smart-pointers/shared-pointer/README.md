@@ -7,13 +7,13 @@ a pointer and share that ownership: once they take ownership, the group
 of owners of a pointer become responsible for its deletion when the last 
 one of them releases that ownership.
 
-Shared_ptr objects release ownership on the object they co-own as soon 
+`Shared_ptr` objects release ownership on the object they co-own as soon 
 as they themselves are destroyed, or as soon as their value changes either 
-by an assignment operation or by an explicit call to shared_ptr::reset. 
+by an assignment operation or by an explicit call to `shared_ptr::reset`. 
 
-Once all shared_ptr objects that share ownership over a pointer have 
+Once all `shared_ptr` objects that share ownership over a pointer have 
 released this ownership, the managed object is deleted (normally by 
-calling ::delete, but a different deleter may be specified on construction).
+calling `delete`, but a different deleter may be specified on construction).
 
 
 ## Example
@@ -44,4 +44,4 @@ Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 
 [std::shared_ptr](http://www.cplusplus.com/reference/memory/shared_ptr/)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*
