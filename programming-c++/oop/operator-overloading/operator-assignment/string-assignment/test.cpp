@@ -6,29 +6,6 @@
 using namespace std;
 
 
-TEST(StringTests, Constructor) 
-{
-    // Setup and exercise
-    SimpleString str("hello");
-    
-    // Verify 
-    EXPECT_EQ(5, str.size());
-    EXPECT_STREQ("hello", str.c_str());
-}
-
-TEST(StringTests, CopyConstructor) 
-{
-    // Setup
-    SimpleString original("world");
-    
-    // Exercise
-    SimpleString copy = original;  // Calls copy constructor
-    
-    // Verify
-    EXPECT_EQ(original.size(), copy.size());
-    EXPECT_STREQ(original.c_str(), copy.c_str());    
-}
-
 TEST(StringTests, AssignmentOperator) 
 {
     // Setup

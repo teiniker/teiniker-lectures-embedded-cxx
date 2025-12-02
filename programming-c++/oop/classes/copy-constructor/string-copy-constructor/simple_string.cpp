@@ -20,11 +20,12 @@ SimpleString::SimpleString(const char* data)
 	_data[_size] = '\0';
 }
 
+
 // Copy Constructor
 SimpleString::SimpleString(const SimpleString& old)
 {
 	printf(">> Called: Copy Constructor\n");
-
+	
 	_size = old._size;
 	_data = new char[_size + 1];
 	for (size_t i = 0; i < _size; i++)
@@ -33,6 +34,7 @@ SimpleString::SimpleString(const SimpleString& old)
 	}
 	_data[_size] = '\0';
 }
+
 
 SimpleString::~SimpleString()
 {

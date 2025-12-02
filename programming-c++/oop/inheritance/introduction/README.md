@@ -10,10 +10,10 @@ between classes, and facilitates **polymorphism**.
 
 The C++ language features support building new classes from existing ones: 
 
-* **Implementation inheritance**: to save implementation effort by sharing 
-    facilities provided by a base class 
+* **Implementation inheritance** to save implementation effort by sharing 
+    facilities provided by a base class.
     
-* **Interface inheritance**: to allow different derived classes to be used 
+* **Interface inheritance** to allow different derived classes to be used 
     interchangeably through the interface provided by a common base class. 
     Interface inheritance is often referred to as run-time polymorphism 
     (or dynamic polymorphism).

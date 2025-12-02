@@ -12,7 +12,7 @@ private:
 public:                
 	SimpleString(const char* data);
 
-	 // Copy Constructor
+	// Copy Constructor
 	SimpleString(const SimpleString& old);
 	
 	~SimpleString();
