@@ -4,6 +4,7 @@ C++ is guided by the **zero-overhead principle** which is based on
 two concepts:
 
 * We don't pay for what we don't use.
+
 * What we do use is just as effective as what we could readonably 
     write by hand.
 
@@ -11,10 +12,11 @@ The only two language features that do not follow the zero-overhead
 principle are RTTI and Exceptions. 
 Therefore, compilers support a switch for turning them off.
 
+
 ## Commonly Used Features 
 
-The following C++ features are safe and practical to use even on small,
-resource‑constrained embedded systems:
+The following C++ features are safe and practical to use even on **small,
+resource‑constrained embedded systems**:
 
 * **Namespaces**: Namespaces group related code under a named scope 
     to prevent naming conflicts.
@@ -76,7 +78,7 @@ Since cleanup is automatic, it’s extremely hard to leak memory or forget to re
 ### Templates
 
 Templates have no overhead and can be thought of as a more powerful version of 
-a pre.processor macro. 
+a pre-processor macro. 
 However, incorrect/careless use of templates can cause a huge increase in code 
 size. Also be careful of overusing them, too much templating makes code very 
 unreadable.
@@ -92,7 +94,6 @@ The ETL is basically a *diet STL* designed for microcontrollers — it gives us
 many of the nice C++ standard library containers and utilities, but 
 **without dynamic allocation**, **without exceptions**, and 
 **without the unpredictable behavior** that small embedded systems can’t afford.
-
 
 The ETL provides fixed-capacity, deterministic, RAM-safe versions of 
 common STL types like:
@@ -121,7 +122,7 @@ worth. They add **significant code size** because the compiler has to pull
 in stack unwinding machinery, type info, and runtime handlers. 
 
 They also make **timing unpredictable**, since throwing and catching an 
-exception isn’t constant-time — a big no-go in real-time code. 
+exception isn’t constant-time - a big no-go in real-time code. 
 
 And when RAM and flash are tight, the extra metadata and runtime support 
 can eat up resources fast. 
@@ -165,6 +166,7 @@ add_compile_options(-fno-rtti)
 Once you build with these flags:
 
 * `typeid()` and `dynamic_cast` stop working for polymorphic types
+
 * The compiler no longer links in the big RTTI runtime baggage
 
 

@@ -35,6 +35,11 @@
  
   * Algorithms
 
+
+* **C++ in Smaller Embedded Systems**
+
+  * [Overview](embedded/README.md)
+
 ## References
 
 * [YouTube: Bjarne Stroustrup: Why I Created C++ ](https://youtu.be/JBjjnqG0BP8?si=ZFvZpu5uKGs23bGe)
