@@ -8,22 +8,3 @@ OrderLine::OrderLine(int id, int quantity, Product* product)
 }
 
 // TODO: Copy Constructor
-
-int OrderLine::id(void) const
-{
-	return _id;
-}
-
-int OrderLine::quantity(void) const
-{
-	return _quantity;
-}
-
-Product* OrderLine::product(void) const
-{
-	return _product;
-}
-void OrderLine::product(Product* product)
-{
-	_product = product;
-}

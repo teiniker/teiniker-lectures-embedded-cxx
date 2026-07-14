@@ -13,7 +13,7 @@ _Example:_ Configure ctest in the `CMakeLists.txt` file
 ```
 cmake_minimum_required(VERSION 3.25)
 project(simple-test LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(test_executable test.cpp)
 target_link_libraries(test_executable PRIVATE gtest gtest_main pthread)
@@ -49,4 +49,4 @@ $ ctest
 
 * [Testing With CMake and CTest](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Testing%20With%20CMake%20and%20CTest.html)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

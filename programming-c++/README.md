@@ -25,6 +25,8 @@
 
 
 * **Templates**
+  - [Introduction](templates/introduction/README.md)
+
 
 
 * **Standard Template Library (STL)**
@@ -51,4 +53,4 @@
 * Bjarne Stroustrup. **A Tour of C++**. Pearson International, 2022
 
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

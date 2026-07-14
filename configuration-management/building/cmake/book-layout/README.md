@@ -43,7 +43,7 @@ in the root of your project directory with the following content:
 ```CMake
 cmake_minimum_required(VERSION 3.25)
 project(book-test LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
@@ -129,4 +129,4 @@ including any failures or errors.
 
 * Rafał Świdziński. **Modern CMake for C++: Discover a better approach to building, testing, and packaging your software**. Packt Publishing, 2022.
 	
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

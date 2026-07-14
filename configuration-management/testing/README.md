@@ -159,4 +159,4 @@ The framework consists of only a header file and a C file and can easily be buil
 * [GitHub: GoogleTest](https://github.com/google/googletest)
 * [GitHub: Unity Test](https://github.com/ThrowTheSwitch/Unity)
 
-*Egon Teiniker, 2020-2024, GPL v3.0* 
+*Egon Teiniker, 2024-2026, GPL v3.0*

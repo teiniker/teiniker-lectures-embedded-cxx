@@ -30,28 +30,5 @@ User& User::operator =(const User& orig)
 	
 	return *this;	
 }	
-	
-int User::id(void) const
-{
-	return _id;
-}
-		
-string User::username(void) const
-{
-	return _username;
-}
-		
-string User::password(void)	const
-{
-	return _password;
-}
 
 // ---[1]-> Mail		
-Mail* User::mail(void)
-{
-	return _mail;
-}
-void User::mail(Mail* mail)
-{
-	_mail = mail;
-}		

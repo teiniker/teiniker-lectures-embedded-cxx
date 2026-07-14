@@ -11,7 +11,8 @@ improving readability, and supporting modular development.
    * For large projects, separating class definitions (in headers) from 
    implementations (in source files) improves clarity and makes it easier to 
    navigate code.
-   * It allows multiple developers to work on different parts of the project simultaneously without conflicts.
+   * It allows multiple developers to work on different parts of the 
+   project simultaneously without conflicts.
 
 2. **Reusability and Encapsulation:**
    * Headers serve as interfaces, making it clear what functionality a 
@@ -38,26 +39,28 @@ improving readability, and supporting modular development.
     class MyClass
     {
     public:
-         void setValue(int v) { value = v; } // Inline implementation
+         void set_value(int v) { _value = v; } // Inline implementation
     private:
-         int value;
+         int _value;
     };
     ```
    * Inline implementation is suitable for small, frequently called methods 
    where performance is critical.
 
 * **Simple Accessors or Mutators:**
-    * Simple getter and setter methods are often defined in the header 
-    for convenience.
+    * Simple getter and setter methods are defined in the header.
+    * Following the modern C++ naming style, **getters use the raw property 
+    name** (no `get` prefix) and **setters use the `set_` prefix**.
     
     _Example:_
     ```cpp
     class MyClass 
     {
     public:
-        int getValue() const { return value; }
+        int value() const { return _value; }
+        void set_value(int v) { _value = v; }
     private:
-        int value;
+        int _value;
     };
     ```
 
@@ -72,9 +75,9 @@ improving readability, and supporting modular development.
     class MyTemplate 
     {
     public:
-        void setValue(T v) { value = v; }
+        void set_value(T v) { _value = v; }
     private:
-        T value;
+        T _value;
     };
     ```
 
@@ -98,4 +101,4 @@ frequently used, or inlineable methods, and the `.cpp` file for larger or
 more complex logic to maintain a clean and maintainable codebase.
 
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

@@ -192,7 +192,7 @@ class LCD : public Display
 		~LCD(void); 					// Destructor
 
 		// Accessors
-		char* buffer(void) const;
+		char* buffer(void) const { return _buffer; }
 
 		// Methods
 		void clear(void);
@@ -241,4 +241,4 @@ reducing the likelihood of errors associated with type conversions.
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 * Chapter 20: Derived Classes
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

@@ -253,4 +253,4 @@ Notes can stand on their own, or they can be linked with a dashed line to the el
   * Chapter 3: Class Diagrams: The Essentials
   * Chapter 5: Class Diagrams: Advanced Concepts
 
-*Egon Teiniker, 2016-2023, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

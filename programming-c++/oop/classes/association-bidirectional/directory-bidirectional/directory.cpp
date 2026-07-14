@@ -8,15 +8,6 @@ Directory::Directory(const string& name)
 {
 }
 
-string Directory::name(void) const
-{
-	return _name;
-}
-void Directory::name(const string& name)
-{
-	_name = name;
-}
-
 void Directory::addFile(File* file)
 {
 	_files.push_back(file);

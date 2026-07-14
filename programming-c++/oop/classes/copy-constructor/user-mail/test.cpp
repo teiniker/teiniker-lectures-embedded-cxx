@@ -43,7 +43,7 @@ TEST(UserTestGroup_CopyConstructorMailTest, MailCopyConstructor)
     Mail original("homer.simpson@springfield.com");
     Mail copy(original);
 
-    original.address("bart.simpson@springfield.com");
+    original.set_address("bart.simpson@springfield.com");
     EXPECT_EQ("bart.simpson@springfield.com", original.address());
     EXPECT_EQ("homer.simpson@springfield.com", copy.address());
 }
@@ -57,7 +57,7 @@ TEST_F(UserTestGroup, CopyConstructorUserTest)
 
     // Modify the original User's Mail
     delete user->mail();
-    user->mail(new Mail("lisa.simpson@springfield.com"));
+    user->set_mail(new Mail("lisa.simpson@springfield.com"));
 
     // Verify copied User's fields remain unchanged
     EXPECT_EQ(7, copy->id());

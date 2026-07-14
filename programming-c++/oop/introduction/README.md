@@ -120,4 +120,4 @@ development lifecycle.
 * Robert C. Martin. **Clean Code: A Handbook of Agile Software Craftsmanship.**. Pearson, 2008
 * Martin Fowler. **UML Distilled**. Addison-Wesley, 3rd Edition, 2004
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

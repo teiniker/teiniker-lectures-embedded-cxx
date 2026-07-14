@@ -9,13 +9,6 @@ Date::~Date()
 {
 }
 
-
-int Date::month() const { return _month; }
-void Date::month(const int month) { _month = month; }
-
-int Date::year() const { return _year; }
-void Date::year(const int year) { _year = year; }
-
 bool Date::isLeapYear()
 {
     return (_year % 4 == 0 && _year % 100 != 0) || (_year % 400 == 0);

@@ -40,4 +40,4 @@ the left-hand operand (the object being indexed) must be known.
 * [Operator Overloading in C++](https://www.geeksforgeeks.org/operator-overloading-c/)
 
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

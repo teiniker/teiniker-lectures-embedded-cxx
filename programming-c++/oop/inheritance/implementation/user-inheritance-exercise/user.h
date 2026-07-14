@@ -14,14 +14,14 @@ class User
 	public:                
 		User(int id, const std::string& username, Mail* mail);
 
-		int id() const;
-		void id(const int id);
+		int id() const { return _id; }
+		void set_id(const int id) { _id = id; }
 		
-		std::string username(void) const;
-		void username(const std::string& username);
+		std::string username(void) const { return _username; }
+		void set_username(const std::string& username) { _username = username; }
 
-		Mail* mail() const;
-		void maild(Mail* mail);		
+		Mail* mail() const { return _mail; }
+		void set_mail(Mail* mail) { _mail = mail; }
  };
 
 #endif /*_USER_H_ */

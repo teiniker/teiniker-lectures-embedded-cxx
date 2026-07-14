@@ -12,8 +12,8 @@ class Mail
 		Mail(const std::string& address);
 		//~Mail(void) {}
     
-		std::string address() const;
-		void address(const std::string& address);
+		std::string address() const { return _address; }
+		void set_address(const std::string& address) { _address = address; }
  };
 
 #endif /*_MAIL_H_ */

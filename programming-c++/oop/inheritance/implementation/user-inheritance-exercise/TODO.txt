@@ -10,6 +10,6 @@ A) Implement the classe "Admin" which inherits from "User" and adds a new
 
 B) Implement the constrctor and the following methods:
 	string password() const;
-	void password(const string& password) const;
+	void set_password(const string& password);
      
 Test your implementation using the "test.cpp" class.

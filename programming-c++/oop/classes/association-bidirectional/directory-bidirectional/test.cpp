@@ -14,11 +14,11 @@ protected:
     {
         student = new Directory("/home/student");
         File* todo = new File("TODO.txt", 1024);
-        todo->directory(student);
+        todo->set_directory(student);
         student->addFile(todo);
 
         File* readme = new File("README.MD", 4096);
-        readme->directory(student);
+        readme->set_directory(student);
         student->addFile(readme);
     }
 

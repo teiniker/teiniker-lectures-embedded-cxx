@@ -17,8 +17,3 @@ int IntegerSequence::next(void)  // static
 	return _value++;
 }
 
-int IntegerSequence::id(void)
-{
-	return _id;
-}
-

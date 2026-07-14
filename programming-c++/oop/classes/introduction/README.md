@@ -44,15 +44,15 @@ public:
     // Default destructor
     ~Book() = default;  
 
-    // Getter and Setter Methods
-    std::string title() const { return _title; }                // inline method
-    void title(const std::string& title) { _title = title; }    // inline method
-    
-    std::string author() const; 
-    void author(const std::string& author);
+    // Getter and Setter Methods (inline)
+    std::string title() const { return _title; }
+    void set_title(const std::string& title) { _title = title; }
 
-    std::string isbn() const;
-    void isbn(const std::string& isbn);
+    std::string author() const { return _author; }
+    void set_author(const std::string& author) { _author = author; }
+
+    std::string isbn() const { return _isbn; }
+    void set_isbn(const std::string& isbn) { _isbn = isbn; }
 
     // Methods
 };
@@ -148,6 +148,17 @@ programming (OOP). They provide controlled access to an object's internal
 data (its attributes or member variables) while maintaining the principles 
 of **encapsulation** and **data hiding**.
 
+We follow the **modern C++ naming style** (as used by the standard library):
+* **Getters** use the raw property name, without a `get` prefix: `title()`, 
+    `author()`, `isbn()`.
+* **Setters** use the `set_` prefix: `set_title()`, `set_author()`, `set_isbn()`.
+
+Trivial accessor methods are **defined directly in the class declaration** 
+(and are therefore implicitly inline). This guarantees that the compiler can 
+optimize away the function call - important for embedded targets, where 
+link-time optimization is often not available - and for one-line accessors 
+it produces smaller code than an out-of-line function call.
+
 The **const keyword** can be used in various contexts in C++, but in the 
 context of member functions, it serves a specific purpose related to
 const-correctness. 
@@ -161,7 +172,7 @@ readability.
     any member variables of the `Book` object (unless those members are marked 
     as mutable).
 
-* `void title(const std::string& title)`: This marks the parameter `title` 
+* `void set_title(const std::string& title)`: This marks the parameter `title` 
     as a constant reference, meaning that within the function body, **we cannot 
     modify the value of `title`**.
 
@@ -179,7 +190,9 @@ function calling is reduced.
 ### Header vs. Source Files
 
 We **separate the declaration and the implementation of methods** (header 
-and source file).
+and source file). Trivial accessor methods stay inline in the header; 
+constructors, destructors, and methods with real logic are implemented 
+in the source file.
 
 _Example_: C++ class implementation (`book.cpp`)
 ```C++
@@ -187,24 +200,6 @@ Book::Book(const std::string& title, const std::string& author, const std::strin
     : _title{title}, _author{author}, _isbn{isbn}
 {
 }
-
-std::string Book::author() const 
-{ 
-    return _author; 
-}                
-void Book::author(const std::string& author) 
-{ 
-    _author = author; 
-}  
-
-std::string Book::isbn() const 
-{ 
-    return _isbn; 
-}                  
-void Book::isbn(const std::string& isbn) 
-{ 
-    _isbn = isbn; 
-}        
 ```
 
 When we implement methods outside a class declaration we use the 
@@ -277,4 +272,4 @@ Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 
 [Destructors in C++](https://www.geeksforgeeks.org/destructors-c/)
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

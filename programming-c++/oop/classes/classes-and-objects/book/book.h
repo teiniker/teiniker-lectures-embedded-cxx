@@ -22,14 +22,14 @@ public:
     ~Book() = default;  
 
     // Getter and Setter Methods
-    std::string title() const { return _title; }                // inline method
-    void title(const std::string& title) { _title = title; }    // inline method
+    std::string title() const { return _title; }
+    void set_title(const std::string& title) { _title = title; }
 
-    std::string author() const;
-    void author(const std::string& author);
+    std::string author() const { return _author; }
+    void set_author(const std::string& author) { _author = author; }
 
-    std::string isbn() const;
-    void isbn(const std::string& isbn);
+    std::string isbn() const { return _isbn; }
+    void set_isbn(const std::string& isbn) { _isbn = isbn; }
 };
 
 #endif // _BOOK_H_

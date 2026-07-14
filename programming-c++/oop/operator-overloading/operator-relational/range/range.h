@@ -15,8 +15,8 @@ class Range
 		Range(const int32_t min, const int32_t max);
 
 		// Accessor methods
-		int32_t value(void) const;
-		void value(const int32_t value);
+		int32_t value() const { return value_; }
+		void set_value(const int32_t value);
 
 		// Operator overloading
 		bool operator==(const Range& other) const;

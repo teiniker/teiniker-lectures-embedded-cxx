@@ -25,13 +25,3 @@ Mail& Mail::operator= (const Mail &orig)
     _address = orig._address;    
     return *this;
 }	
-    
-string Mail::address(void) const
-{
-    return _address;
-}
-
-void Mail::address(const string& address)
-{
-    _address = address;
-}

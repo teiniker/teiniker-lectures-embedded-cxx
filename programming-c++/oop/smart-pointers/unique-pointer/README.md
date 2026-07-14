@@ -53,4 +53,4 @@ TEST(MailTestGroup, UniquePointerTest)
 
 * [C++11 Smart Pointer – Part 6 : unique_ptr<> Tutorial and Examples](https://thispointer.com/c11-unique_ptr-tutorial-and-examples/)
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

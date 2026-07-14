@@ -14,23 +14,3 @@ OrderLine::OrderLine(const OrderLine& old)
 	_quantity = old._quantity;
 	_product = new Product(*old._product);	
 }
-
-
-int OrderLine::id(void) const
-{
-	return _id;
-}
-
-int OrderLine::quantity(void) const
-{
-	return _quantity;
-}
-
-Product* OrderLine::product(void) const
-{
-	return _product;
-}
-void OrderLine::product(Product* product)
-{
-	_product = product;
-}

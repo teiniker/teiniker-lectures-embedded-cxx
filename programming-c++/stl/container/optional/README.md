@@ -76,4 +76,4 @@ else
 
 * [C++ References: std::optional](https://en.cppreference.com/w/cpp/utility/optional.html)
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

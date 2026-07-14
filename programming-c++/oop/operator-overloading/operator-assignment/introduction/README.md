@@ -33,4 +33,4 @@ the member function is currently being invoked.
     
 * [Overloading the assignment operator](https://www.learncpp.com/cpp-tutorial/9-14-overloading-the-assignment-operator/)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

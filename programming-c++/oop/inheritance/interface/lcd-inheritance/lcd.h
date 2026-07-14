@@ -17,7 +17,7 @@ class LCD : public Display
 		~LCD(void); 					// Destructor
 
 		// Accessors
-		char* buffer(void) const;
+		char* buffer(void) const { return _buffer; }
 
 		// Methods
 		void clear(void) override;

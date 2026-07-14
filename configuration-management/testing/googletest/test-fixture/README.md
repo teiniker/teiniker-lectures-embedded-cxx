@@ -101,7 +101,7 @@ cmake_minimum_required(VERSION 3.25)
 
 project(test-fixture LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(test test.cpp)
@@ -122,4 +122,4 @@ $ ./test
 * [Assertions Reference](https://google.github.io/googletest/reference/assertions.html)
 
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

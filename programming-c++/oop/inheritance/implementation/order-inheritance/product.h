@@ -14,8 +14,8 @@ class Product : public Entity
 	public:
 		Product(int id, const std::string& description, long price); 
 
-		std::string description(void);
-		long price(void);
+		std::string description(void) { return _description; }
+		long price(void) { return _price; }
 };
 
 #endif /*_PRODUCT_H_ */

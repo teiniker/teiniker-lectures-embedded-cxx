@@ -30,8 +30,3 @@ void LCD::print(const char* c_ptr)
 	strcpy(_buffer + _index, c_ptr);
 	_index += sizeof(c_ptr);
 }
-
-char* LCD::buffer(void) const
-{
-	return _buffer;
-}

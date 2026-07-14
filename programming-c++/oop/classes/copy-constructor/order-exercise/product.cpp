@@ -8,18 +8,3 @@ Product::Product(int id, const string& description, long price)
 }
 
 // TODO: Copy Constructor
-
-int Product::id(void) const
-{
-	return _id;
-}
-
-string Product::description(void) const
-{
-	return _description;
-}
-
-long Product::price(void) const
-{
-	return _price;
-}

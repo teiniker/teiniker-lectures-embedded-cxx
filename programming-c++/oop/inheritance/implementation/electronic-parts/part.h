@@ -16,9 +16,9 @@ class Part // abstract class
 		virtual ~Part(void) {}
 		
 		// Accessor methods
-		int id() const;
-		double value() const;
-		std::string unit() const;	
+		int id() const { return _id; }
+		double value() const { return _value; }
+		std::string unit() const { return _unit; }
 
 		// Operations
 		virtual std::string to_csv(void) const;

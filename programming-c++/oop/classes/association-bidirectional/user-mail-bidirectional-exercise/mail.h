@@ -13,7 +13,7 @@ class Mail
 		Mail(const std::string& address);
     
 		// Accessors
-		std::string address() const;
+		std::string address() const { return _address; }
 };
 
 #endif /*_MAIL_H_ */

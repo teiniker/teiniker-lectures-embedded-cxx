@@ -178,4 +178,4 @@ Once you build with these flags:
 
 * [Embedded Template Library](https://www.etlcpp.com/)
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

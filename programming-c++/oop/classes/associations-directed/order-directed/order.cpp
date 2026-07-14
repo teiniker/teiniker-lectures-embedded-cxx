@@ -7,16 +7,6 @@ Order::Order(int id, const string& name)
 {
 }
 
-int Order::id(void) const
-{
-	return _id;	
-}
-
-string Order::name(void) const
-{
-	return _name;
-}
-
 void Order::addLine(OrderLine* line)
 {
 	_lines.push_back(line);

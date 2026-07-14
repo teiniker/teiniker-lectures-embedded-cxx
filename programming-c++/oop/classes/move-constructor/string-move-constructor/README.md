@@ -35,4 +35,4 @@ String::String(String&& other) noexcept
 	- It allows our type to be used efficiently in more places.
 
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

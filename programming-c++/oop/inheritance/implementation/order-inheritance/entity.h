@@ -9,7 +9,7 @@ class Entity
 	public:
 		Entity(int id);
 		
-		int id(void);
+		int id(void) { return _id; }
  };
 
 #endif /*_ENTITY_H_ */

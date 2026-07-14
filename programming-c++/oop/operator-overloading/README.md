@@ -30,5 +30,5 @@ Also review the **operators** of the following **standard library classes**:
 * [std::array](https://en.cppreference.com/w/cpp/container/array.html)
 * [std::vector](https://en.cppreference.com/w/cpp/container/vector.html)
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*
 

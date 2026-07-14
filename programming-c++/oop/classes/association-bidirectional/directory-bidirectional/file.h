@@ -14,15 +14,15 @@ class File
 	public:
 		File(const std::string& name, size_t size);
     
-		std::string name(void) const;
-		void name(const std::string& name);
+		std::string name(void) const { return _name; }
+		void set_name(const std::string& name) { _name = name; }
 		
-		size_t size(void) const;
-		void size(const size_t size);
+		size_t size(void) const { return _size; }
+		void set_size(const size_t size) { _size = size; }
 		
 		// Association: File ---[1]-> Directory
-		Directory* directory(void) const;
-		void directory(Directory* directory);
+		Directory* directory(void) const { return _directory; }
+		void set_directory(Directory* directory) { _directory = directory; }
  };
 
 #endif /*_FILE_H_ */

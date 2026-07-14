@@ -14,9 +14,9 @@ class Product
 		Product(int id, const std::string& description, long price); 
 		// TODO: Copy Constructor
 		
-		int id(void) const;		
-		std::string description(void) const;
-		long price(void) const;
+		int id(void) const { return _id; }
+		std::string description(void) const { return _description; }
+		long price(void) const { return _price; }
  };
 
 #endif /*_PRODUCT_H_ */

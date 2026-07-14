@@ -13,8 +13,8 @@ class OrderLine : public Entity
 	public:
 		OrderLine(int id, int quantity, Product* product);
 
-		int quantity(void);
-		Product* product(void);
+		int quantity(void) { return _quantity; }
+		Product* product(void) { return _product; }
  };
 
 #endif /*_ORDERLINE_H_ */

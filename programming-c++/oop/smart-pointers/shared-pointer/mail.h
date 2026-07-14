@@ -14,8 +14,8 @@ class Mail
 		Mail(const string& address);
 		~Mail(void);
     
-		string address(void);
-		void address(const string& address);
+		string address() { return address_; }
+		void set_address(const string& address) { address_ = address; }
  };
 
 #endif /*_MAIL_H_ */

@@ -7,4 +7,4 @@
 * [shared_ptr](shared-pointer/)
 
 
-_Egon Teiniker, 2020-2025, GPL v3.0_
+*Egon Teiniker, 2024-2026, GPL v3.0*

@@ -14,8 +14,8 @@ class Admin : public User
 	public:                
 		Admin(int id, const std::string& username, const std::string& password, Mail* mail);
 
-		std::string password();
-		void password(const std::string& password);
+		std::string password() { return _password; }
+		void set_password(const std::string& password) { _password = password; }
  };
 
 #endif /*_USER_H_ */

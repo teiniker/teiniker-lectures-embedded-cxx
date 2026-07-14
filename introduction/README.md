@@ -80,5 +80,5 @@ systems development using C++.
 * Jez Humble, Davis Farley. **Continuous Delivery**. Addison-Wesley, 2010
 
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*
 

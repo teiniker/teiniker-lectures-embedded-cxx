@@ -11,9 +11,9 @@ class Date
 	public:
 		Date(int dd, int mm, int yyyy);
 				
-		int day(void) const;
-		int month(void) const;
-		int year(void) const;
+		int day(void) const { return _dd; }
+		int month(void) const { return _mm; }
+		int year(void) const { return _yyyy; }
  };
 
 #endif /*_DATE_H_ */

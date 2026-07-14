@@ -19,8 +19,8 @@ class Directory
 	public:
 		Directory(const std::string& name);
 		
-		std::string name(void) const;
-		void name(const std::string& name);
+		std::string name(void) const { return _name; }
+		void set_name(const std::string& name) { _name = name; }
 		
 		// ---[*]-> File
 		void addFile(File* file);

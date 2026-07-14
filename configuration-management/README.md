@@ -27,4 +27,4 @@ Successful configuration management includes at least the following activities:
 * Paul M. Duvall. **Continuous Integration - Improving Software Quality and Reducing Risk**. Addison-Wesley, 2007
 * Martin Fowler. **Continuous Integration**. http://martinfowler.com/articles
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

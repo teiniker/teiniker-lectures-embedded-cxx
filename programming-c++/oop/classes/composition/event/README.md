@@ -86,4 +86,4 @@ TEST(EventTestGroup, EventTest)
 From the outside, it is not apparent whether an `Event` is a single object
 or the composition of three objects.
 
-*Egon Teiniker, 2024-2025, GPL v3.0*  
+*Egon Teiniker, 2024-2026, GPL v3.0*

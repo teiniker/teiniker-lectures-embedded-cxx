@@ -64,4 +64,4 @@ TEST_F(UserTest, InvalidUsernameTooLongTest)
     * If no exception or a different type of exception is thrown, 
     the test fails.
 
-_Egon Teiniker, 2020-2024, GPL v3.0_    
+*Egon Teiniker, 2024-2026, GPL v3.0*

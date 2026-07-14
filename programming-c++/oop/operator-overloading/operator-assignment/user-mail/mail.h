@@ -14,8 +14,8 @@ class Mail
 		Mail(const Mail& old);				// Copy Constructor   
 		Mail& operator= (const Mail &orig);	// Assigment Operator
 			 
-		std::string address(void) const;
-		void address(const std::string& address);
+		std::string address(void) const { return _address; }
+		void set_address(const std::string& address) { _address = address; }
  };
 
 #endif /*_MAIL_H_ */

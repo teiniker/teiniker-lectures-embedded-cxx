@@ -12,17 +12,6 @@ CanMsg::CanMsg(uint32_t id, uint8_t dlc, const uint8_t *data)
     }
 }
 
-// Accessor methods
-uint32_t CanMsg::id() const
-{
-    return _id;
-}
-
-uint8_t CanMsg::dlc() const
-{
-    return _dlc;
-}
-
 uint8_t CanMsg::data(uint8_t index) const
 {
     return _data[index];

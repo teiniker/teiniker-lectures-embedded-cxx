@@ -22,4 +22,4 @@ iterate over its elements because it is designed to provide only LIFO
 * [C++ Reference: stack](https://en.cppreference.com/w/cpp/container/stack)
 
 
-*Egon Teiniker, 2020-2023, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

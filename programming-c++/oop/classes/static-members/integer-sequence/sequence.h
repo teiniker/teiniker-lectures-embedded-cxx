@@ -15,7 +15,7 @@ class IntegerSequence
 		static void init(int value);
 		static int next(void); 
 		
-		int id(void);
+		int id(void) { return _id; }
  };
 
 #endif /*_INTEGER_SEQUENCE_H_ */

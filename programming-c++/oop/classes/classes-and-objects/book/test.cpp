@@ -27,9 +27,9 @@ TEST(BookTest, Setters)
     Book book("1984", "George Orwell", "978-3730614389");
 
     // Using setter methods to modify the Book object
-    book.title("Animal Farm");
-    book.author("George Orwell");
-    book.isbn("978-3730615874");
+    book.set_title("Animal Farm");
+    book.set_author("George Orwell");
+    book.set_isbn("978-3730615874");
 
     EXPECT_EQ("Animal Farm", book.title());
     EXPECT_EQ("George Orwell", book.author());

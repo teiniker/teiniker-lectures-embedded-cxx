@@ -13,13 +13,3 @@ Mail::~Mail(void)
 {
     cout << "Mail - destructor" << endl;
 }
-    
-string Mail::address()
-{
-    return address_;
-}
-
-void Mail::address(const string& address)
-{
-    address_ = address;
-}

@@ -5,11 +5,6 @@ Counter::Counter(int value, int min, int max)
 {
 }
 
-int Counter::value(void) const
-{
-	return _value;
-}
-
 void Counter::operator ++(int)
 {
 	if(_value < _max)

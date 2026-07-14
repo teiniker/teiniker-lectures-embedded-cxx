@@ -33,9 +33,9 @@ TEST(DateTest, Setters)
     Date birthday(23, 6, 1912);
 
     // Using setter methods to modify the Date object
-    birthday.day(24);
-    birthday.month(7);
-    birthday.year(1913);
+    birthday.set_day(24);
+    birthday.set_month(7);
+    birthday.set_year(1913);
 
     EXPECT_EQ(24, birthday.day());
     EXPECT_EQ(7, birthday.month());

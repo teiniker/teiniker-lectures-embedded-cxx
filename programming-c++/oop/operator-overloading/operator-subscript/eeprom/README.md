@@ -40,4 +40,4 @@ The overloaded `operator[]` in the EEPROM class enhances usability
 by allowing users to access and manipulate EEPROM memory using 
 familiar array syntax. 
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

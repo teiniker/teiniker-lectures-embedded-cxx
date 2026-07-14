@@ -49,4 +49,4 @@ of copied object point to new memory locations.
     - Chapter 3.3: Copy and Move
 
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

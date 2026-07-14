@@ -62,6 +62,6 @@ When should we use UML:
 
 * Jim Arlow, Ila Neustadt. **UML 2 and the Unified Process**. Addison-Wesley, 2nd Edition, 2005
 
-*Egon Teiniker, 2020-2024, GPL v3.0*  
+*Egon Teiniker, 2024-2026, GPL v3.0*
 
 

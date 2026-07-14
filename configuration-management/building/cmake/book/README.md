@@ -12,7 +12,7 @@ cmake_minimum_required(VERSION 3.25)
 
 project(book LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(main main.cpp book.cpp)
@@ -26,7 +26,7 @@ add_executable(main main.cpp book.cpp)
 * **project(YourProjectName LANGUAGES CXX)**: Defines the project name and specifies 
     that it's a C++ project.
 
-* **set(CMAKE_CXX_STANDARD 17)**: Sets the C++ standard to C++17. You can change 
+* **set(CMAKE_CXX_STANDARD 20)**: Sets the C++ standard to C++17. You can change 
     this to 11, 14, 20, etc., depending on your requirements.
 
 * **set(CMAKE_CXX_STANDARD_REQUIRED True)**: Ensures that the specified C++ standard 
@@ -58,5 +58,5 @@ $ ./build/main
 
 * Rafał Świdziński. **Modern CMake for C++: Discover a better approach to building, testing, and packaging your software**. Packt Publishing, 2022.
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*
 

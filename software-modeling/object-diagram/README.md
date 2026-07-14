@@ -66,4 +66,4 @@ If we also add a bidirectional association, a graph of nodes results at runtime.
 * Martin Fowler. **UML Distilled**. Addison-Wesley, 3rd Edition, 2004
   * Chapter 6: Object Diagrams
 
-*Egon Teiniker, 2016-2023, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

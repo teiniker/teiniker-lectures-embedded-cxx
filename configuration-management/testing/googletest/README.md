@@ -97,4 +97,4 @@ Here’s an overview of the most commonly used command-line parameters:
 
 * [YouTube (Amir Kirsh): Back to Basics: C++ Testing - CppCon 2022](https://youtu.be/SAM4rWaIvUQ?si=YJS6xIkRIOeYVy-b)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

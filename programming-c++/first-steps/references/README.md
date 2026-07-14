@@ -49,4 +49,4 @@ to another memory address,
 * Josh Lospinoso. **C++ Crash Course**. No Starch Press, 2019 
     * Chapter: Upgrading to Super C 
 
-*Egon Teiniker, 2020-2023, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

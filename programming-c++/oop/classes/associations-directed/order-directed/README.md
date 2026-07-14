@@ -40,7 +40,7 @@ private:
 
 public:
     OrderLine(int id, int quantity, Product* product);
-    Product* product(void) const;
+    Product* product(void) const { return _product; }
 ```
 
 In this example the `Product` reference is set in the constructor and can
@@ -83,4 +83,4 @@ TEST_F(OrderTest, Product1Test)
 }
 ```
 
-*Egon Teiniker, 2024-2025, GPL v3.0*  
+*Egon Teiniker, 2024-2026, GPL v3.0*

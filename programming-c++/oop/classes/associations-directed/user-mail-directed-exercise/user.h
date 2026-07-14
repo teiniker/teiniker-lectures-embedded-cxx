@@ -15,14 +15,14 @@ class User
 	public:                
 		User(const int id, const std::string& username, const std::string& password);
 
-		int id(void) const;
-		void id(const int id);
+		int id() const { return _id; }
+		void set_id(const int id) { _id = id; }
 		
-		std::string username(void) const;
-		void username(const std::string& username);
+		std::string username(void) const { return _username; }
+		void set_username(const std::string& username) { _username = username; }
 		
-		std::string password() const;
-		void password(const std::string& password);
+		std::string password() const { return _password; }
+		void set_password(const std::string& password) { _password = password; }
 };
 
 #endif /*_USER_H_ */

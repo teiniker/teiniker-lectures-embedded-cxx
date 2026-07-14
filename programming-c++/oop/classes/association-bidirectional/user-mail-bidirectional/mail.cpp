@@ -8,18 +8,3 @@ Mail::Mail(const string& address)
 {
     _user = NULL;
 }
-    
-string Mail::address() const
-{
-    return _address;
-}
-
-User* Mail::user() const
-{
-    return _user;
-}
-
-void Mail::user(User* user)
-{
-    _user = user;
-}

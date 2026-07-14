@@ -14,7 +14,7 @@ class Counter
 		Counter(int value, int min, int max);
 		
 		// Getter 
-		int value(void) const;
+		int value(void) const { return _value; }
  };
 
 #endif /*_COUNTER_H_ */

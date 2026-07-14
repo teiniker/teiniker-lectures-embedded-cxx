@@ -15,12 +15,12 @@ class Mail
 		Mail(const std::string& address);
     
 		// Accessors
-		std::string address() const;
+		std::string address() const { return _address; }
 
 		// Association
 		// ---[1]-> User
-		User* user(void) const;
-		void user(User* user);
+		User* user() const { return _user; }
+		void set_user(User* user) { _user = user; }
  };
 
 #endif /*_MAIL_H_ */

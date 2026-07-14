@@ -9,4 +9,4 @@
     * Example: [data-service](data-service/)  
     * Exercise: [controller](controller-exercise/) ([Model Solution](controller/))
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

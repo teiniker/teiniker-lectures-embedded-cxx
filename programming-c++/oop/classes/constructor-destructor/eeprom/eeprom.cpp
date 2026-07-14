@@ -13,11 +13,6 @@ EEPROM::~EEPROM()
 	delete[] _memory;  // free(memory_)
 } 
 
-string EEPROM::type(void) const 
-{
-	return _type;
-}
-
 uint8_t EEPROM::read(const uint32_t address) const
 {
 	// 0 <= address < size

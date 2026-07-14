@@ -15,7 +15,7 @@ class EEPROM
 		EEPROM(const std::string& type, const size_t size);
 		~EEPROM(); 
 
-		std::string type(void);
+		std::string type() { return type_; }
 		
 		uint8_t read(uint32_t address);					// 0 <= address < size
 		void write(uint32_t address, uint8_t value);	// 0 <= address < size

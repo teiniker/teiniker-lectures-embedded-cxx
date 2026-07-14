@@ -57,8 +57,8 @@ private:
     Directory* _directory = nullptr;
 
 public:
-    Directory* directory(void) const;
-    void directory(Directory* directory);
+    Directory* directory(void) const { return _directory; }
+    void set_directory(Directory* directory) { _directory = directory; }
 ```
 
 This is the standard implementation for a directed association with
@@ -98,4 +98,4 @@ TEST_F(DirectoryTest, ConstructorTest)
 }
 ```
 
-*Egon Teiniker, 2024-2025, GPL v3.0*  
+*Egon Teiniker, 2024-2026, GPL v3.0*

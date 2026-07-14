@@ -17,8 +17,8 @@ class Order
 		Order(int id, const std::string& name);	
 		Order(const Order& old);	// Copy Constructor   
 		   
-		int id(void) const;		
-		std::string name(void) const;
+		int id(void) const { return _id; }
+		std::string name(void) const { return _name; }
 		
 		void addLine(OrderLine* line);
 		OrderLine* line(int index);

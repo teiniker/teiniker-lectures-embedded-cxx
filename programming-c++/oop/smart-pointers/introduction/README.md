@@ -68,4 +68,4 @@ semantics**:
 * Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
     * Chapter 34. Memory and Resources
 
-_Egon Teiniker, 2024-2025, GPL v3.0_
+*Egon Teiniker, 2024-2026, GPL v3.0*

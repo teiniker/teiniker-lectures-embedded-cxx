@@ -141,4 +141,4 @@ compared to C-style strings.
 
 * [C++ Reference: string](https://en.cppreference.com/w/cpp/string/basic_string)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

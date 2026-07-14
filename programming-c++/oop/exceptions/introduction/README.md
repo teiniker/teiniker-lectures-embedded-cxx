@@ -190,4 +190,4 @@ that appears in parentheses following the keyword catch.
 * [C++ Exception Handling](https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm)
 
 
-_Egon Teiniker, 2024-2025, GPL v3.0_
+*Egon Teiniker, 2024-2026, GPL v3.0*

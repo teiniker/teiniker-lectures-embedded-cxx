@@ -15,9 +15,9 @@ class OrderLine
 	public:
 		OrderLine(int id, int quantity, Product* product);
 
-		int id(void) const; 
-		int quantity(void) const;
-		Product* product(void) const;
+		int id(void) const { return _id; }
+		int quantity(void) const { return _quantity; }
+		Product* product(void) const { return _product; }
 };
 
 #endif /*_ORDERLINE_H_ */

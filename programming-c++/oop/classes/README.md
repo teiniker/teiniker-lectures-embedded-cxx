@@ -37,4 +37,4 @@ surrounding classes, objects, and their relationships:
     * Example: [user-mail](copy-constructor/user-mail/)
     * Exercise: [order](copy-constructor/order-exercise/) ([Model Solution](copy-constructor/order/))
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

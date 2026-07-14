@@ -16,7 +16,7 @@ class Order : public Entity
 	public:
 		Order(int id, const std::string& name);	
 		   
-		std::string name(void);
+		std::string name(void) { return _name; }
 
 		void addLine(OrderLine* line);
 		OrderLine* line(int index);

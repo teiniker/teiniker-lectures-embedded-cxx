@@ -70,4 +70,4 @@ TEST(SimpleStringTests, AssignmentOperator)
 }
 ```
 
-*Egon Teiniker, 2024-2025, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

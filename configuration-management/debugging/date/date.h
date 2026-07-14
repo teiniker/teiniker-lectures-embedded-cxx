@@ -14,14 +14,14 @@ class Date
         Date(int d, int m, int y);  // Constructor   
         ~Date();                    // Destructor
 
-        int day() const;
-        void day(const int d);
+        int day() const { return _day; }
+        void set_day(const int day) { _day = day; }
         
-        int month() const; 
-        void month(const int m);
+        int month() const { return _month; }
+        void set_month(const int month) { _month = month; }
         
-        int year() const;
-        void year(const int y);
+        int year() const { return _year; }
+        void set_year(const int year) { _year = year; }
 
         bool isLeapYear();
 };

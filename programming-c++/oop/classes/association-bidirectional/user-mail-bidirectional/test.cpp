@@ -15,7 +15,7 @@ protected:
     {
         Mail* mail = new Mail("homer.simpson@springfield.com");
         user = new User(7, "homer", "c3R1ZGVudA", mail);
-        mail->user(user);
+        mail->set_user(user);
     }
 
     void TearDown() override 

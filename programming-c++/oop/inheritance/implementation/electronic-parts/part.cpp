@@ -7,21 +7,6 @@ Part::Part(const int id, const double value, const string& unit)
 {
 }
 
-int Part::id() const
-{
-	return _id;
-}
-
-double Part::value() const
-{
-	return _value;
-}
-
-string Part::unit() const
-{
-	return _unit;
-}
-
 string Part::to_csv(void) const
 {
 	char buffer[100];

@@ -20,13 +20,13 @@ class User
 		User(const int id, const std::string& username, const std::string& password, Mail* mail);
 
 		// Accessors
-		int id(void) const;
-		std::string username(void) const;
-		std::string password() const;
+		int id() const { return _id; }
+		std::string username(void) const { return _username; }
+		std::string password() const { return _password; }
 		
 		// Association --[1]-> Mail
-		Mail* mail(void) const;
-		void mail(Mail* mail);
+		Mail* mail() const { return _mail; }
+		void set_mail(Mail* mail) { _mail = mail; }
  };
 
 #endif /*_USER_H_ */

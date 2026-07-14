@@ -5,12 +5,7 @@ Range::Range(const int32_t min, const int32_t max)
 {
 }
 
-int32_t Range::value(void) const
-{
-	return value_;
-}
-
-void Range::value(const int32_t value)
+void Range::set_value(const int32_t value)
 {
 	if (value < min_)
 	{

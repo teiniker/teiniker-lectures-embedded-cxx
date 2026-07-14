@@ -64,4 +64,4 @@ It is quite common for an interface and its implementation to be in a separate p
 * Martin Fowler. **UML Distilled**. Addison-Wesley, 3rd Edition, 2004
   * Chapter 7: Package Diagrams
   
-*Egon Teiniker, 2016-2023, GPL v3.0*
+*Egon Teiniker, 2024-2026, GPL v3.0*

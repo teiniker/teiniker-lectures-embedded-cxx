@@ -18,9 +18,9 @@ class User
 		User(const int id, const std::string& username, const std::string& password);
 
 		// Accessors
-		int id(void) const;
-		std::string username(void) const;
-		std::string password() const;
+		int id() const { return _id; }
+		std::string username(void) const { return _username; }
+		std::string password() const { return _password; }
 		
 		// Association --[1]-> Mail
 		void addMail(Mail* mail);
