@@ -54,30 +54,12 @@ Common applications and practices of C++ in embedded systems:
    * C++ still allows direct memory access using pointers, bit manipulation, 
    and inline assembly when needed.
 
-Because some **embedded systems have strict constraints**, there are some
-considerations to keep in mind when using C++ in these environments:
-
-* **Avoid dynamic memory allocation** (e.g., `new`, `delete`, heap usage) 
-    unless carefully managed, as it can cause fragmentation.
-
-* **Limit STL usage** due to potential for dynamic memory usage and larger 
-    code footprint.
-
-* **Careful exception handling**: Often disabled in embedded compilers to 
-    reduce code size and complexity.
-
-* **RTTI (Run-Time Type Information)** is usually avoided for the same reasons.
-
-In this repository, you will find a collection of C++ examples and projects
-that demonstrate various aspects of C++ programming without restrictions.
-
-Later, we will come back to restrictions and best practices for embedded 
-systems development using C++.
-
 
 ## References
+
 * [YouTube: Bjarne Stroustrup: Why I Created C++ ](https://youtu.be/JBjjnqG0BP8?si=ZFvZpu5uKGs23bGe)
-* Jez Humble, Davis Farley. **Continuous Delivery**. Addison-Wesley, 2010
+
+* Bjarne Stroustrup. **C++ Programming Language**. Addison-Wesley, 4th Edition 2013
 
 
 *Egon Teiniker, 2024-2026, GPL v3.0*

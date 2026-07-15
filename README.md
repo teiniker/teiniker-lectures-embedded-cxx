@@ -3,7 +3,7 @@
 This repository collects documentation, examples, exercises and model solutions 
 needed to understand C++ for embedded systems.
 
-* [Introduction](introduction/) 
+* [Introduction](introduction/README.md) 
 
 * [Configuration Management](configuration-management/)
 
