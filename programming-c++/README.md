@@ -1,54 +1,35 @@
 # C++ Programming
 
 * **Introduction**
-
-  * [What We Know From C](first-steps/CKnowHow.md)
-
-  * [First Steps in C++](first-steps/README.md)
-    
-  * [C++ in Embedded Systems](embedded/)
-
-
-* **Object-Oriented Programming**
-
-  * [Introduction](oop/introduction/README.md)
-
-  * [Classes and Objects](oop/classes)
-
-  * [Operator Overloading](oop/operator-overloading/)
-
-  * [Inheritance and Abstract Classes](oop/inheritance/)
-
-  * [Exception Handling](oop/exceptions/)
-
-  * [Smart Pointers](oop/smart-pointers/)
-
+  - [C Programming](c-programming/README.md)
+  - [From C to C++](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B/basics)
+  - [C++ Implementation Aspects](implementation-aspects/README.md)
+  
+* **Object-Oriented Programming (OOP)**
+  - [Introduction](oop/introduction/README.md)
+  - [Classes and Objects](oop/classes)
+  - [Operator Overloading](oop/operator-overloading/)
+  - [Inheritance and Abstract Classes](oop/inheritance/)
+  - [Exception Handling](oop/exceptions/)
+  - [Smart Pointers](oop/smart-pointers/)
 
 * **Templates**
   - [Introduction](templates/introduction/README.md)
-
-
+  - [Template Functions](templates/template-functions/)
+  - [Template Classes](templates/template-classes/)
 
 * **Standard Template Library (STL)**
-  
-  * [Strings](stl/string/)
-    
-  * [Containers](stl/container/) 
- 
-  * Algorithms
+  - [Strings](stl/string/)
+  - [Containers](stl/container/) 
+  - [Algorithms]()
 
+* **C++ in Embedded Systems**
+  - [C++ Subset for Embedded Systems](embedded-c++/README.md)
 
-* **C++ in Smaller Embedded Systems**
-
-  * [Overview](embedded/README.md)
 
 ## References
 
 * [YouTube: Bjarne Stroustrup: Why I Created C++ ](https://youtu.be/JBjjnqG0BP8?si=ZFvZpu5uKGs23bGe)
-
-* Amar Mahmutbegović. **C++ in Embedded Systems: A practical transition from C to modern C++**. Packt Publishing, 2025
-
-* Josh Lospinoso. **C++ Crash Course: A Fast-Paced Introduction**. No Starch Press, 2019
 
 * Bjarne Stroustrup. **A Tour of C++**. Pearson International, 2022
 

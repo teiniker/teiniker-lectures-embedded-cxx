@@ -1,4 +1,4 @@
-# C++ in Embedded Systems
+# C++ Subset for Embedded Systems
 
 C++ is guided by the **zero-overhead principle** which is based on 
 two concepts:
