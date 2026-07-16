@@ -1,5 +1,4 @@
-#ifndef _USER_H_
-#define _USER_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -27,5 +26,3 @@ class User
 		Mail* mail(int index) const; 
 		size_t numberOfMails(void) const;
  };
-
-#endif /*_USER_H_ */

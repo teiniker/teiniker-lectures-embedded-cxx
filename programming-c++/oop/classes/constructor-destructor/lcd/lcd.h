@@ -1,5 +1,4 @@
-#ifndef _LCD_H_
-#define _LCD_H_
+#pragma once
 
 #include <cstdlib>
 
@@ -23,5 +22,3 @@ class LCD
 		void print(char c);
 		void print(const char * c_ptr);
  };
-
-#endif /*_LCD_H_ */

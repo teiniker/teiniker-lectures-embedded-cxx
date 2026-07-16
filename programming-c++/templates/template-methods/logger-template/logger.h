@@ -1,5 +1,4 @@
-#ifndef _LOGGER_H_
-#define _LOGGER_H_
+#pragma once
 
 #include <string>
 #include <sstream>
@@ -50,5 +49,3 @@ public:
     template <typename T>
     void debug(const T& message) { log(LogLevel::DEBUG, message); }
 };
-
-#endif

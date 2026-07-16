@@ -1,5 +1,4 @@
-#ifndef _RESISTOR_H_
-#define _RESISTOR_H_
+#pragma once
 
 #include <cstdint>
 
@@ -21,5 +20,3 @@ class Resistor
         void serial(const Resistor& r);
         void parallel(const Resistor& r);
 };
-
-#endif // _RESISTOR_H_

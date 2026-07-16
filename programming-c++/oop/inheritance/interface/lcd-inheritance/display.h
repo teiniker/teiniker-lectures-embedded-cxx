@@ -1,5 +1,4 @@
-#ifndef _DISPLAY_H_
-#define _DISPLAY_H_
+#pragma once
 
 class Display 
 {
@@ -11,5 +10,3 @@ class Display
 		virtual void print(char c) = 0;
 		virtual void print(const char * c_ptr) = 0;
 };
-
-#endif /*_DISPLAY_H_ */

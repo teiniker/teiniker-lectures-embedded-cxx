@@ -1,5 +1,4 @@
-#ifndef _CALCULATOR_SLOW_H_
-#define _CALCULATOR_SLOW_H_
+#pragma once
 
 #include "calculator.h"
 
@@ -11,5 +10,3 @@ class CalculatorSlow : public Calculator
 		
 		int sumOfSequence(const int n) override;				
 };
- 
-#endif /*_CALCULATOR_SLOW_H_ */

@@ -1,5 +1,4 @@
-#ifndef _STACK_H_
-#define _STACK_H_
+#pragma once
 
 struct Node 
 {
@@ -28,5 +27,3 @@ class Stack
     private:
         Node *_first_ptr;
 };
-
-#endif /* _STACK_H_ */

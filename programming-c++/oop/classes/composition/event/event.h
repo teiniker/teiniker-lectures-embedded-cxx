@@ -1,5 +1,4 @@
-#ifndef _EVENT_H_
-#define _EVENT_H_
+#pragma once
 
 #include <string>
 
@@ -21,5 +20,3 @@ class Event
 
 		std::string to_string(void) const;
  };
-
-#endif /*_EVENT_H_ */

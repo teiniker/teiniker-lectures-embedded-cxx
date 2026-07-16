@@ -1,5 +1,4 @@
-#ifndef _CAPACITOR_H_
-#define _CAPACITOR_H_
+#pragma once
 
 #include <string>
 
@@ -15,5 +14,3 @@ class Capacitor : public Part
 
 		std::string to_csv(void) const override;
 };
-
-#endif /*_CAPACITOR_H_ */

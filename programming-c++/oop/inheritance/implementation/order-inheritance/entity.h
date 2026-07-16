@@ -1,5 +1,4 @@
-#ifndef _ENTITY_H_
-#define _ENTITY_H_
+#pragma once
 
 class Entity 
 {
@@ -11,5 +10,3 @@ class Entity
 		
 		int id(void) { return _id; }
  };
-
-#endif /*_ENTITY_H_ */

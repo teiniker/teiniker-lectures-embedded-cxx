@@ -1,5 +1,4 @@
-#ifndef _DATE_H_
-#define _DATE_H_
+#pragma once
 
 #include <cstdint>
 
@@ -25,5 +24,3 @@ class Date
 
         bool isLeapYear();
 };
-
-#endif // _DATE_H_

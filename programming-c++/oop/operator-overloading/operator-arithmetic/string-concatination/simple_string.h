@@ -1,5 +1,4 @@
-#ifndef _SIMPLESTRING_H_
-#define _SIMPLESTRING_H_
+#pragma once
 
 #include <cstddef>
 
@@ -25,5 +24,3 @@ public:
  	size_t size() const { return _size; }
 	const char* c_str() const { return _data; }
 };
-
-#endif //_SIMPLESTRING_H_

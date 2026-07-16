@@ -1,5 +1,4 @@
-#ifndef _COUNTER_H_
-#define _COUNTER_H_
+#pragma once
 
 
 class Counter 
@@ -20,5 +19,3 @@ class Counter
 		void operator ++(int);	// postfix increment operator
 		void operator --(int);	// postfix decrement operator
  };
-
-#endif /*_COUNTER_H_ */

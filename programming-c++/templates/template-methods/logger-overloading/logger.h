@@ -1,5 +1,4 @@
-#ifndef _LOGGER_H_
-#define _LOGGER_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -55,5 +54,3 @@ public:
     void debug(double value) { log(LogLevel::DEBUG, to_string(value)); }
     void debug(char value) { log(LogLevel::DEBUG, std::string(1, value)); }
 };
-
-#endif

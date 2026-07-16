@@ -1,5 +1,4 @@
-#ifndef _BOOK_H_
-#define _BOOK_H_
+#pragma once
 
 #include <cstdint>
 #include <string>
@@ -31,5 +30,3 @@ public:
     std::string isbn() const { return _isbn; }
     void set_isbn(const std::string& isbn) { _isbn = isbn; }
 };
-
-#endif // _BOOK_H_

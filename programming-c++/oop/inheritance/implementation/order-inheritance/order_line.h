@@ -1,5 +1,4 @@
-#ifndef _ORDERLINE_H_
-#define _ORDERLINE_H_
+#pragma once
 
 #include "entity.h"
 #include "product.h"
@@ -16,5 +15,3 @@ class OrderLine : public Entity
 		int quantity(void) { return _quantity; }
 		Product* product(void) { return _product; }
  };
-
-#endif /*_ORDERLINE_H_ */

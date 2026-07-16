@@ -1,5 +1,4 @@
-#ifndef _USER_H_
-#define _USER_H_
+#pragma once
 
 #include <string>
 
@@ -22,5 +21,3 @@ class User
 		std::string password() const { return _password; }
 		void set_password(const std::string& password) { _password = password; }
  };
-
-#endif /*_USER_H_ */

@@ -1,5 +1,4 @@
-#ifndef _SIMPLESTRING_H_
-#define _SIMPLESTRING_H_
+#pragma once
 
 #include <cstddef>
 
@@ -27,5 +26,3 @@ public:
 		return _data;
 	}
 };
-
-#endif //_SIMPLESTRING_H_

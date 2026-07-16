@@ -1,5 +1,4 @@
-#ifndef _EEPROM_H_
-#define _EEPROM_H_
+#pragma once
 
 #include <string>
 #include <cstdint>
@@ -23,5 +22,3 @@ class EEPROM
 		// Operator overloading
 		uint8_t& operator[]( const uint32_t address );
 };
-
-#endif /*_EEPROM_H_ */

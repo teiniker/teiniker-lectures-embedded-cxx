@@ -1,5 +1,4 @@
-#ifndef _DIRECTORY_H_
-#define _DIRECTORY_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -27,5 +26,3 @@ class Directory
 		File* file(int index);
 		int numberOfFiles(void);
  };
-
-#endif /*_DIRECTORY_H_ */

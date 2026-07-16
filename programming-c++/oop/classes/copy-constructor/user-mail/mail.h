@@ -1,5 +1,4 @@
-#ifndef _MAIL_H_
-#define _MAIL_H_
+#pragma once
 
 #include <string>
 
@@ -15,5 +14,3 @@ class Mail
 		std::string address(void) const { return _address; }
 		void set_address(const std::string& address) { _address = address; }
  };
-
-#endif /*_MAIL_H_ */

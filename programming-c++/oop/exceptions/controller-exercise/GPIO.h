@@ -1,5 +1,4 @@
-#ifndef _GPIO_H_
-#define _GPIO_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -21,5 +20,3 @@ class GPIO
 		void digitalWrite(const int pin, const bool value);
 		bool digitalRead(const int pin);
  };
-
-#endif /*_GPIO_H_ */

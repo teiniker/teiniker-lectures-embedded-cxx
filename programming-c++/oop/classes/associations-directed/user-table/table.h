@@ -1,5 +1,4 @@
-#ifndef _USER_TABLE_H_
-#define _USER_TABLE_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -19,5 +18,3 @@ class UserTable
 		User& findByUsername(const std::string& username);
 		size_t size() const;
  };
-
-#endif /*_USER_TABLE_H_ */

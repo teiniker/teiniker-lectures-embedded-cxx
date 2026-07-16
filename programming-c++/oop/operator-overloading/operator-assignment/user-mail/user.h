@@ -1,5 +1,4 @@
-#ifndef _USER_H_
-#define _USER_H_
+#pragma once
 
 #include <string>
 #include "mail.h"
@@ -25,5 +24,3 @@ class User
 		Mail* mail(void) { return _mail; }
 		void set_mail(Mail* mail) { _mail = mail; }
  };
-
-#endif /*_USER_H_ */

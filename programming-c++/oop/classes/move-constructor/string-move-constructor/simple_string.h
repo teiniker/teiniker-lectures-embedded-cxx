@@ -1,5 +1,4 @@
-#ifndef _SimpleString_H_
-#define _SimpleString_H_
+#pragma once
 
 #include <cstddef>
 
@@ -28,5 +27,3 @@ public:
 		return _data;
 	}
 };
-
-#endif //_SimpleString_H_

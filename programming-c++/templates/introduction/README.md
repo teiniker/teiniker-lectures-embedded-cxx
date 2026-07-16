@@ -197,12 +197,12 @@ But the disadvantages weigh heavier on small targets:
 
 ## References
 
+* [YouTube (Back to Basics): Templates in C++ - Nicolai Josuttis](https://youtu.be/HqsEHG0QJXU?si=6_JibWHXTIKKnQzQ)
+
 * Bjarne Stroustrup. **The C++ Programming Language**. Pearson 4th Edition 2017
     * Chapter 23: Templates
     * Chapter 24: Generic Programming
     * Chapter 25: Specialization
-
-* [cppreference: Templates](https://en.cppreference.com/w/cpp/language/templates)
 
 
 *Egon Teiniker, 2024-2026, GPL v3.0*

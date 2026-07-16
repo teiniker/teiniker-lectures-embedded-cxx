@@ -1,5 +1,4 @@
-#ifndef _COMPLEX_H_
-#define _COMPLEX_H_
+#pragma once
 
 class Complex 
 {
@@ -23,5 +22,3 @@ public:
 	Complex operator +(const Complex& c);
 	Complex operator -(const Complex& c);
  };
-
-#endif /*_COMPLEX_H_ */

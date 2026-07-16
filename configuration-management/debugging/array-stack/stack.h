@@ -1,5 +1,4 @@
-#ifndef _ARRAY_STACK_H_
-#define _ARRAY_STACK_H_
+#pragma once
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -21,5 +20,3 @@ extern int stack_pop(array_stack_t *stack);
 extern int stack_top(array_stack_t *stack);
 
 extern void stack_print(array_stack_t *stack);
-
-#endif /* _ARRAY_STACK_H_ */

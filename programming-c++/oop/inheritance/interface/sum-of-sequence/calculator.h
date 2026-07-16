@@ -1,5 +1,4 @@
-#ifndef _CALCULATOR_H_
-#define _CALCULATOR_H_
+#pragma once
 
 class Calculator // Interface 
 {
@@ -8,5 +7,3 @@ class Calculator // Interface
 
 		virtual int sumOfSequence(const int n) = 0;
  };
-
-#endif /*_CALCULATOR_H_ */

@@ -1,5 +1,4 @@
-#ifndef _ORDER_H_
-#define _ORDER_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -24,5 +23,3 @@ class Order
 		int numberOfLines(void);
  
  };
-
-#endif /*_MAIL_H_ */

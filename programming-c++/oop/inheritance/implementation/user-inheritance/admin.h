@@ -1,5 +1,4 @@
-#ifndef _ADMIN_H_
-#define _ADMIN_H_
+#pragma once
 
 #include <string>
 
@@ -17,5 +16,3 @@ class Admin : public User
 		std::string password() { return _password; }
 		void set_password(const std::string& password) { _password = password; }
  };
-
-#endif /*_USER_H_ */

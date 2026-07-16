@@ -1,5 +1,4 @@
-#ifndef _COUNTER_H_
-#define _COUNTER_H_
+#pragma once
 
 
 class Counter 
@@ -16,5 +15,3 @@ class Counter
 		// Getter 
 		int value(void) const { return _value; }
  };
-
-#endif /*_COUNTER_H_ */

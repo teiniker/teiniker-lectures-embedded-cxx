@@ -1,5 +1,4 @@
-#ifndef _FILE_H_
-#define _FILE_H_
+#pragma once
 
 #include <string>
 #include "directory.h"
@@ -24,5 +23,3 @@ class File
 		Directory* directory(void) const { return _directory; }
 		void set_directory(Directory* directory) { _directory = directory; }
  };
-
-#endif /*_FILE_H_ */

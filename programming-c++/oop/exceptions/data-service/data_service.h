@@ -1,5 +1,4 @@
-#ifndef _DATA_SERVICE_H_
-#define _DATA_SERVICE_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -35,5 +34,3 @@ class DataService
 		std::vector<int> readData();
 		void writeData(const std::vector<int>& data);
  };
-
-#endif /*_FILESERVICE_H_ */

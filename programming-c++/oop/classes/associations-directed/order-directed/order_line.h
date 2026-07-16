@@ -1,5 +1,4 @@
-#ifndef _ORDERLINE_H_
-#define _ORDERLINE_H_
+#pragma once
 
 #include <string>
 
@@ -19,5 +18,3 @@ class OrderLine
 		int quantity(void) const { return _quantity; }
 		Product* product(void) const { return _product; }
 };
-
-#endif /*_ORDERLINE_H_ */

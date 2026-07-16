@@ -1,5 +1,4 @@
-#ifndef _USER_H_
-#define _USER_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -20,5 +19,3 @@ class User
 		std::string username(void) const { return _username; }
 		std::string password() const { return _password; }
  };
-
-#endif /*_USER_H_ */

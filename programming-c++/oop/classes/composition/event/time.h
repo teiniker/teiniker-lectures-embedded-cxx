@@ -1,5 +1,4 @@
-#ifndef _TIME_H_
-#define _TIME_H_
+#pragma once
 
 class Time 
 {
@@ -15,5 +14,3 @@ class Time
 		int minutes(void) const { return _min; }
 		int seconds(void) const { return _sec; }
  };
-
-#endif /*_TIME_H_ */

@@ -1,5 +1,4 @@
-#ifndef _DATE_H_
-#define _DATE_H_
+#pragma once
 
 class Date 
 {
@@ -15,5 +14,3 @@ class Date
 		int month(void) const { return _mm; }
 		int year(void) const { return _yyyy; }
  };
-
-#endif /*_DATE_H_ */

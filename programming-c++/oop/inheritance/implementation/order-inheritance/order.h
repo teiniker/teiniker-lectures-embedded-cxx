@@ -1,5 +1,4 @@
-#ifndef _ORDER_H_
-#define _ORDER_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -22,5 +21,3 @@ class Order : public Entity
 		OrderLine* line(int index);
 		int numberOfLines(void);
  };
-
-#endif /*_ORDER_H_ */

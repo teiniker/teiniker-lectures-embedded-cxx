@@ -1,5 +1,4 @@
-#ifndef _PRODUCT_H_
-#define _PRODUCT_H_
+#pragma once
 
 #include <string>
 
@@ -18,5 +17,3 @@ class Product
 		std::string description(void) const { return _description; }
 		long price(void) const { return _price; }
  };
-
-#endif /*_PRODUCT_H_ */

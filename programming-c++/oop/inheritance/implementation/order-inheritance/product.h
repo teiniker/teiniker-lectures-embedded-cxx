@@ -1,5 +1,4 @@
-#ifndef _PRODUCT_H_
-#define _PRODUCT_H_
+#pragma once
 
 #include <string>
 #include "entity.h"
@@ -17,5 +16,3 @@ class Product : public Entity
 		std::string description(void) { return _description; }
 		long price(void) { return _price; }
 };
-
-#endif /*_PRODUCT_H_ */

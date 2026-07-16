@@ -1,5 +1,4 @@
-#ifndef _PART_H_
-#define _PART_H_
+#pragma once
 
 #include <string>
 #include "part.h"
@@ -23,5 +22,3 @@ class Part // abstract class
 		// Operations
 		virtual std::string to_csv(void) const = 0;
  };
-
-#endif /*_PART_H_ */

@@ -1,5 +1,4 @@
-#ifndef _FILE_SERVICE_H_
-#define _FILE_SERVICE_H_
+#pragma once
 
 #include <string>
 #include <fstream> 
@@ -29,5 +28,3 @@ class FileService
 		std::string readFile() const;
 		void writeFile(const std::string& content);
  };
-
-#endif /*_FILE_SERVICE_H_ */

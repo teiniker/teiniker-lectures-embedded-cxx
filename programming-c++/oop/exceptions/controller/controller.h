@@ -1,5 +1,4 @@
-#ifndef _CONTROLLER_H_
-#define _CONTROLLER_H_
+#pragma once
 
 #include <GPIO.h>
 #include <iostream>
@@ -33,5 +32,3 @@ class Controller
 		
 		// ...		
  };
-
-#endif /*_CONTROLLER_H_ */

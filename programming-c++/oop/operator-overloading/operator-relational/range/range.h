@@ -1,5 +1,4 @@
-#ifndef _RANGE_H_
-#define _RANGE_H_
+#pragma once
 
 #include <cstdint>
 
@@ -26,5 +25,3 @@ class Range
 		bool operator<=(const Range& other) const;
 		bool operator>=(const Range& other) const;
 };
-
-#endif /*_RANGE_H_ */

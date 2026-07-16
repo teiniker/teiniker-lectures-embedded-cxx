@@ -1,5 +1,4 @@
-#ifndef _MAIL_H_
-#define _MAIL_H_
+#pragma once
 
 #include <string>
 
@@ -15,5 +14,3 @@ class Mail
 		// Accessors
 		std::string address() const { return _address; }
 };
-
-#endif /*_MAIL_H_ */

@@ -1,5 +1,4 @@
-#ifndef BOOK_H
-#define BOOK_H
+#pragma once
 
 #include <string>
 
@@ -29,5 +28,3 @@ private:
     std::string _author;
     std::string _title;
 };
-
-#endif // BOOK_H

@@ -1,5 +1,4 @@
-#ifndef _INTEGER_SEQUENCE_H_
-#define _INTEGER_SEQUENCE_H_
+#pragma once
 
 class IntegerSequence 
 {
@@ -17,5 +16,3 @@ class IntegerSequence
 		
 		int id(void) { return _id; }
  };
-
-#endif /*_INTEGER_SEQUENCE_H_ */

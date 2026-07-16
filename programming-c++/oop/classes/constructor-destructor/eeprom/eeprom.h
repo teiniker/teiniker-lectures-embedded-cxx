@@ -1,5 +1,4 @@
-#ifndef _EEPROM_H_
-#define _EEPROM_H_
+#pragma once
 
 #include <string>
 #include <cstdint>
@@ -20,5 +19,3 @@ class EEPROM
 		uint8_t read(const uint32_t address) const;
 		void write(const uint32_t address, const uint8_t value);		
  };
-
-#endif /*_EEPROM_H_ */

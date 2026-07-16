@@ -1,5 +1,4 @@
-#ifndef _STACK_H_
-#define _STACK_H_
+#pragma once
 
 #include <array>
 #include <cstddef>
@@ -23,5 +22,3 @@ class Stack
         T pop() { return _data[--_index]; }
         T top() const { return _data[_index - 1]; }
 };
-
-#endif 
