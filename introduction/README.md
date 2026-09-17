@@ -25,34 +25,12 @@ as object-oriented programming.
    * C++ provides stronger type checking and support for abstract interfaces, 
    reducing bugs and improving software robustness.
 
+## C++ Implementation 
 
-## C++ in Embedded Systems
+* [Implementation Aspects](implementation-aspects/README.md)
 
-C++ is increasingly popular in embedded systems for its ability to balance 
-high-level abstractions with low-level hardware control. 
+* [C++ in Embedded Systems](embedded-c++/README.md)
 
-Common applications and practices of C++ in embedded systems:
-
-* **Microcontroller Programming**
-    * C++ is used to write firmware for microcontrollers like ARM Cortex-M, 
-    AVR, or ESP32.
-    * Common toolchains: GCC for ARM (arm-none-eabi), AVR-GCC, etc.
-
-* **Device Drivers and Hardware Abstraction Layers (HAL)**
-   * C++ classes are often used to wrap low-level C functions for hardware 
-   access, making APIs cleaner and more modular.
-
-* **Real-Time Operating Systems (RTOS)**
-   * C++ can be used with RTOSes (e.g., FreeRTOS, ThreadX) to structure tasks, 
-   threads, and events.
-
-* **State Machines and Control Systems**
-   * Object-oriented design is well-suited for modeling state machines and 
-   event-driven control logic.
-
-* **Bare-Metal and Low-Level Access**
-   * C++ still allows direct memory access using pointers, bit manipulation, 
-   and inline assembly when needed.
 
 
 ## References
