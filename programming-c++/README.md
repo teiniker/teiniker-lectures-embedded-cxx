@@ -3,7 +3,6 @@
 * **Introduction**
   - [C Programming](c-programming/README.md)
   - [From C to C++](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B/basics)
-  - [C++ Implementation Aspects](implementation-aspects/README.md)
   
 * **Object-Oriented Programming (OOP)**
   - [Introduction](oop/introduction/README.md)

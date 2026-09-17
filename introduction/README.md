@@ -25,12 +25,18 @@ as object-oriented programming.
    * C++ provides stronger type checking and support for abstract interfaces, 
    reducing bugs and improving software robustness.
 
-## C++ Implementation 
 
-* [Implementation Aspects](implementation-aspects/README.md)
+## C++ Implementation Aspects 
 
-* [C++ in Embedded Systems](embedded-c++/README.md)
+Just like any other language, C++ has unique implementation details. 
+Unfortunately, because C++ has grown organically over decades, clear 
+and unambiguous standards are hard to come by.
 
+* [Header vs. Implementation Files](implementation-aspects/header-vs-cpp/README.md)
+
+* [Include Guards](implementation-aspects/include-guards/README.md)
+
+* [Naming Conventions](implementation-aspects/naming-conventions/README.md)
 
 
 ## References
