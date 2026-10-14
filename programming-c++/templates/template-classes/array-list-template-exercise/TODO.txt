@@ -1,0 +1,19 @@
+Exercise: Array List - Templates
+-------------------------------------------------------------------------------
+
+Given the implementation of an ArrayList of integer values.
+
+Refactor the "array_list.h" to implement a template class 
+
+    template <typename T, size_t N>
+    class ArrayList
+    {
+        //...
+    }
+
+and remove "array_list.cpp".
+
+Refactor all methods to support the type parameter instead of int.
+
+Make all the test cases in "test.cpp" work.
+
