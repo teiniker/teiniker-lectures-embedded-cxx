@@ -1,7 +1,6 @@
 # C++ Programming
 
 * **Introduction**
-  - [C Programming](c-programming/README.md)
   - [From C to C++](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B/basics)
   
 * **Object-Oriented Programming (OOP)**
