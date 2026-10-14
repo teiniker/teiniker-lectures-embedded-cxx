@@ -172,6 +172,8 @@ Once you build with these flags:
 
 ## References
 
+* [YouTube (The Linux Foundation): C++ for Embedded Development](https://youtu.be/wLq-5lBc7x4?si=HcEzyV2xQ5mcfSO8)
+
 * Amar Mahmutbegović. **C++ in Embedded Systems: A practical transition from C to modern C++**. Packt Publishing, 2025
 
 * [C++ On Embedded Systems](https://blog.mbedded.ninja/programming/languages/c-plus-plus/cpp-on-embedded-systems/)
