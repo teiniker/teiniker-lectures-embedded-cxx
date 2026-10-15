@@ -1,0 +1,12 @@
+Exercise: Clamping values to a range - Template Function
+-------------------------------------------------------------------------------
+
+Given a concrete implementation:
+
+int clamp(const int& value, const int& min, const int& max)
+
+Refactor this function into a Template Function, so that we can use other types 
+than int.
+
+Verify you implementation with "test.cpp".
+
