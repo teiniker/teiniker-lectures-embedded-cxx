@@ -3,9 +3,10 @@
 * [Introduction](introduction/README.md)
 
 * Template Functions 
-    - [max-value-int](template-functions/max-value-int/) vs. [max-value-template](template-functions/max-value-template/)
-    - [print-overload](template-functions/) vs. [print-template](template-functions/print-template/)
-
+    - Demo: [max-value-int](template-functions/max-value-int/) vs. [max-value-template](template-functions/max-value-template/)
+    - Demo: [print-overload](template-functions/) vs. [print-template](template-functions/print-template/)
+    - Exercise: [clamping](template-functions/clamping-exercise/) ([Model Solution](template-functions/clamping/))
+    
 * Template Classes 
     - Demo: [stack-int](template-classes/stack-int/) vs. [stack-template](template-classes/stack-template/)    
     - Demo: [array-list-int](template-classes/array-list-int/)
