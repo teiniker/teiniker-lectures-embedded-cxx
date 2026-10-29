@@ -18,8 +18,6 @@ Successful configuration management includes at least the following activities:
 
 * [**Debugging**](debugging/README.md)
 
-* [**Generative AI**](generative-ai/README.md)
-
 
 ## References
 
