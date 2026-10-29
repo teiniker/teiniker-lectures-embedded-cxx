@@ -8,10 +8,11 @@ Successful configuration management includes at least the following activities:
 
 * [**Version Control**](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
 
-* [**Build Automation**](building/cmake/)
+* **Build Automation**
     - [Layout of C/C++ projects](building/project-layout/README.md)
     - [Steps of a C/C++ build process](building/build-steps/)
     - [C/C++ compiler flags](building/compiler-flags/)
+    - [CMake](building/cmake/)
     
 * [**Test Automation**](testing/)
 
