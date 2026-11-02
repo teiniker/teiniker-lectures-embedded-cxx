@@ -6,7 +6,7 @@
 
 * **Object-Oriented Programming (OOP)**
   - [Introduction](oop/introduction/README.md)
-  - [Classes and Objects](oop/classes)
+  - [Classes](oop/classes)
   - [Operator Overloading](oop/operator-overloading/)
   - [Inheritance and Abstract Classes](oop/inheritance/)
   - [Exception Handling](oop/exceptions/)

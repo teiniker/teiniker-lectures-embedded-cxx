@@ -82,11 +82,11 @@ All **members of a class** (attributes and methods) are **private per default**.
 
 ### Constructor
 
-**Constructors** are special class members which are called by the compiler 
+**Constructors** are special class members which are called  
 every time an object of that class is instantiated. Constructors have the 
 **same name as the class**.
  
-There are three different types of constructurs in C++:
+There are different types of constructurs in C++:
 
 * **Default Constructors:** 
     The default constructor is the constructor which doesn’t take any 
