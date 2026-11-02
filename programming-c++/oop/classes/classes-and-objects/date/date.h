@@ -10,9 +10,14 @@ class Date
         int _year;
 
     public:
-        Date(int d, int m, int y);  // Constructor 
+        // Initializing Constructor
+        Date(int d, int m, int y);  
 
-        ~Date();                    // Destructor
+        // Copy Constructor
+        Date(const Date &date) = default;
+
+        // Default destructor
+        ~Date() = default;  
 
         // Getter and Setter Methods
         int day() const { return _day; }
