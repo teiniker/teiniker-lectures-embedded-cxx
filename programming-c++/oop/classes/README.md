@@ -16,6 +16,7 @@ surrounding classes, objects, and their relationships:
     * Exercise: [lcd](raii/lcd-exercise/) ([Model Solution](raii/lcd/))
 
 * **Static Members**
+    * [Introduction](static-members/README.md)
     * Demo: [integer-sequence](static-members/integer-sequence/)
 
 * **Directed Associations**
