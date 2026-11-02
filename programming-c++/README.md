@@ -5,7 +5,7 @@
   - [Implementation Aspects](implementation-aspects/README.md)
 
 * **Object-Oriented Programming (OOP)**
-  - [Introduction](oop/introduction/README.md)
+  - [Introduction to OOP Concepts](oop/introduction/README.md)
   - [Classes](oop/classes)
   - [Operator Overloading](oop/operator-overloading/)
   - [Inheritance and Abstract Classes](oop/inheritance/)

@@ -10,9 +10,10 @@ surrounding classes, objects, and their relationships:
     * Exercise: [resistor](classes-and-objects/resistor-exercise/) ([Model Solution](classes-and-objects/resistor/))
     * Exercise: [can-message](classes-and-objects/can-message-exercise/) ([Model Solution](classes-and-objects/can-message/))
 
-* **Constructor and Destructor**
-    * Exercise: [eeprom](constructor-destructor/eeprom-exercise/) ([Model Solution](constructor-destructor/eeprom/))
-    * Exercise: [lcd](constructor-destructor/lcd-exercise/) ([Model Solution](constructor-destructor/lcd/))
+* **Resource Acquisition Is Initialization (RAII)**
+    * [Introduction](raii/README.md)
+    * Exercise: [eeprom](raii/eeprom-exercise/) ([Model Solution](raii/eeprom/))
+    * Exercise: [lcd](raii/lcd-exercise/) ([Model Solution](raii/lcd/))
 
 * **Static Members**
     * Demo: [integer-sequence](static-members/integer-sequence/)
