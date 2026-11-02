@@ -1,4 +1,4 @@
-# Classes and Objects 
+# Classes 
 
 The following examples and exercises are intended to further clarify the concepts 
 surrounding classes, objects, and their relationships:
