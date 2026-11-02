@@ -3,13 +3,11 @@
 This repository collects documentation, examples, exercises and model solutions 
 needed to understand C++ for embedded systems.
 
-* [Introduction](introduction/README.md) 
+* [What We Know From C](programming-c/README.md)
 
 * [Configuration Management](configuration-management/)
 
 * [Software Modeling](software-modeling/README.md)
-
-* [What We Know From C](programming-c/README.md)
 
 * [Programming in C++ ](programming-c++/) 
 
