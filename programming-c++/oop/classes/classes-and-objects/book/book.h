@@ -14,12 +14,6 @@ public:
     // Initializing Constructor
     Book(const std::string& title, const std::string& author, const std::string& isbn);
 
-    // Copy Constructor
-    Book(const Book &book) = default;
-
-    // Default destructor
-    ~Book() = default;  
-
     // Getter and Setter Methods
     std::string title() const { return _title; }
     void set_title(const std::string& title) { _title = title; }

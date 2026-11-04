@@ -13,12 +13,6 @@ class Date
         // Initializing Constructor
         Date(int d, int m, int y);  
 
-        // Copy Constructor
-        Date(const Date &date) = default;
-
-        // Default destructor
-        ~Date() = default;  
-
         // Getter and Setter Methods
         int day() const { return _day; }
         void set_day(const int day) { _day = day; }
