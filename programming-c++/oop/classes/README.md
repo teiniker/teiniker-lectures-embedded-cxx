@@ -20,11 +20,14 @@ surrounding classes, objects, and their relationships:
     * Demo: [integer-sequence](static-members/integer-sequence/)
 
 * **Directed Associations**
-    * Demo: [order-directed](associations-directed/order-directed/)
-    * Exercise: [user-mail-directed](associations-directed/user-mail-directed-exercise/) ([Model Solution](associations-directed/user-mail-directed/))
-    * Exercise: [user-table](associations-directed/user-table-exercise/) ([Model Solution](associations-directed/user-table/))
-    * Exercise: [linked-stack](associations-directed/linked-stack-exercise/) ([Model Solution](associations-directed/linked-stack/))
-
+    - Multiplicity: 1
+        * Demo: [order-directed](associations-directed/order-directed/)
+        * Exercise: [user-mail-directed](associations-directed/user-mail-directed-exercise/) ([Model Solution](associations-directed/user-mail-directed/))
+        * Exercise: [linked-stack](associations-directed/linked-stack-exercise/) ([Model Solution](associations-directed/linked-stack/))
+    - Multiplicity: *
+        * Demo: [user-mail-directed-many](associations-directed/user-mail-directed-many/)
+        * Exercise: [user-table](associations-directed/user-table-exercise/) ([Model Solution](associations-directed/user-table/))
+    
 * **Bidirectional Associations**
     * Demo: [directory-bidirectional](association-bidirectional/directory-bidirectional/)
     * Exercise: [user-mail-bidirectional](association-bidirectional/user-mail-bidirectional-exercise/) ([Model Solution](association-bidirectional/user-mail-bidirectional/))
@@ -34,8 +37,12 @@ surrounding classes, objects, and their relationships:
 
 * **Copy Constructor**
     * [Introduction](copy-constructor/introduction/README.md)
-    * Demo: [string-copy-constructor](copy-constructor/string-copy-constructor/)
+    * Demo: [simple-string-copy](copy-constructor/simple-string-copy/)
     * Demo: [user-mail](copy-constructor/user-mail/)
     * Exercise: [order](copy-constructor/order-exercise/) ([Model Solution](copy-constructor/order/))
+
+* **Move Constructor**
+    * [Introduction](move-constructor/introduction/README.md)
+    * [simple-string](move-constructor/simple-string-move/)
 
 *Egon Teiniker, 2024-2026, GPL v3.0*

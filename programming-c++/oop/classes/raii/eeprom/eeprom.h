@@ -11,11 +11,13 @@ class EEPROM
 		uint8_t* _memory;
  
 	public:
+		// Constructor 
 		EEPROM(const std::string& type, const size_t size);
+		// Destructor 
 		~EEPROM(); 
 
+		// Getter methods
 		std::string type(void) const { return _type; }
-		
 		uint8_t read(const uint32_t address) const;
 		void write(const uint32_t address, const uint8_t value);		
  };
