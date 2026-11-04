@@ -7,7 +7,7 @@ improving readability, and supporting modular development.
 
 ## When to Split Implementation into Header and Source Files
 
-* **Code Organization and Modularity:**
+1. **Code Organization and Modularity:**
    * For large projects, separating class definitions (in headers) from 
    implementations (in source files) improves clarity and makes it easier to 
    navigate code.
