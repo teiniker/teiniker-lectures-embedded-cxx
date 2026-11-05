@@ -16,13 +16,6 @@ public:
 	
 	~SimpleString();
 		
- 	size_t size() const
-	{
-		return _size;
-	}
-
-	const char* c_str() const
-	{
-		return _data;
-	}
+ 	size_t size() const { return _size; }
+	const char* c_str() const { return _data; }
 };

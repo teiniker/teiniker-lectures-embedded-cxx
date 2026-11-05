@@ -27,36 +27,25 @@ own `String` object.
 ```C++
 SimpleString::SimpleString(const char* data)
 {
-	_size = 0;
-	while (data[_size] != '\0')
-	{
-		_size++;
-	}
-
+	_size = strlen(data);
 	_data = new char[_size + 1];
-	for (size_t i = 0; i < _size; i++)
-	{
-		_data[i] = data[i];
-	}
-
-    _data[_size] = '\0';
+	strcpy(_data, data);
 }
 ```
 
 * Figure out how long the input C-string is:
-    It just walks through the characters until it hits the null terminator 
-    (`'\0'`), counting how many characters there are.
+    `strlen()` walks through the characters until it hits the null
+    terminator (`'\0'`), counting how many characters there are.
     So `_size` becomes the length of the string without the null terminator.
 
 * Allocate memory for your internal buffer:
     We need space for the characters plus one extra byte for that `'\0'` 
     terminator at the end.
 
-* Copy each character manually: Straight-up for-loop copy.     
+* Copy the characters using `strcpy()`, which also copies the
+    terminating `'\0'`, so no manual null termination is needed.
 
-* Add a null terminator:
-    Since `_size` counts just the characters, position `_size` is where 
-    the terminator goes.
+Both functions are declared in the `<cstring>` header.
 
 
 Our custom `SimpleString` class uses `new[]` in the constructor to allocate 
@@ -118,24 +107,20 @@ pointer to the same memory.
 ```C++
 SimpleString::SimpleString(const SimpleString& old)
 {
-	_size = old._size;
-
+	_size = strlen(old._data);
 	_data = new char[_size + 1];
-	for (size_t i = 0; i < _size; i++)
-	{
-		_data[i] = old._data[i];
-	}
-	_data[_size] = '\0';
+	strcpy(_data, old._data);
 }
 ```
 
-* Copy the `_size` attribute value.
+* Determine the length of the original string using `strlen()`, which
+    counts the characters up to (but not including) the `'\0'` terminator.
 
-* Allocate new memory: `String` creates its own fresh buffer.
+* Allocate new memory: `SimpleString` creates its own fresh buffer with
+    one extra byte for the null terminator.
 
-* Copy the actual characters: One-by-one copying.
-
-* Null-terminate the new string
+* Copy the characters using `strcpy()`, which also copies the
+    terminating `'\0'`, so no manual null termination is needed.
 
 Now that we have a proper copy constructor, the test will pass successfully.
 

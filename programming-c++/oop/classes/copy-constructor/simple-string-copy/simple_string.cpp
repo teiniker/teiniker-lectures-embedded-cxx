@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cstring>
 
 #include <simple_string.h>
 
@@ -6,18 +7,9 @@ using namespace std;
 
 SimpleString::SimpleString(const char* data)
 {	
-	_size = 0;
-	while (data[_size] != '\0')
-	{
-		_size++;
-	}
-
+	_size = strlen(data);
 	_data = new char[_size + 1];
-	for (size_t i = 0; i < _size; i++)
-	{
-		_data[i] = data[i];
-	}
-	_data[_size] = '\0';
+	strcpy(_data, data);
 }
 
 
@@ -26,13 +18,9 @@ SimpleString::SimpleString(const SimpleString& old)
 {
 	printf(">> Called: Copy Constructor\n");
 	
-	_size = old._size;
+	_size = strlen(old._data);
 	_data = new char[_size + 1];
-	for (size_t i = 0; i < _size; i++)
-	{
-		_data[i] = old._data[i];
-	}
-	_data[_size] = '\0';
+	strcpy(_data, old._data);
 }
 
 
