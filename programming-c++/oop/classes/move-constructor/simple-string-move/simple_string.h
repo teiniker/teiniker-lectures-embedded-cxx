@@ -10,7 +10,6 @@ private:
 	
 public:                
 	SimpleString(const char* data);
-	SimpleString(const SimpleString& old);
 
 	// Move Constructor
 	SimpleString(SimpleString&& other) noexcept; 
