@@ -21,6 +21,7 @@ SimpleString::SimpleString(const SimpleString& old)
 	std::strcpy(_data, old._data);
 }
 
+// Destructor
 SimpleString::~SimpleString()
 {
 	delete[] _data;
@@ -34,10 +35,8 @@ SimpleString& SimpleString::operator=(const SimpleString& other)
 	if (this != &other) // Self-assignment check
 	{
 		delete[] _data;		
-
 		_size = other._size;
 		_data = new char[_size + 1];
-
 		std::strcpy(_data, other._data);
 	}
 	return *this;
