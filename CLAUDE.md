@@ -103,3 +103,5 @@ public:
     - Use direction LR
     - Add a : between an attribute name and type, e.g. id:int
     - Make the constructor static (add $ at the end)
+    - For private members (prefixed with -), skip the leading underscore
+        of the C++ name, e.g. -cols:size_t instead of -_cols:size_t
