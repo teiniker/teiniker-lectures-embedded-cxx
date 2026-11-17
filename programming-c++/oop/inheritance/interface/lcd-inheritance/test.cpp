@@ -65,6 +65,20 @@ TEST(LCDTestGroup, PrintTest)
     EXPECT_STREQ("Hello Graz!", display.buffer());    
 }
 
+TEST(LCDTestGroup, PrintCharPtrThenCharTest) 
+{
+    // Setup
+    LCD display(8, 2);
+    display.clear();
+
+    // Exercise
+    display.print("Hi");
+    display.print('!');
+    
+    // Verify
+    EXPECT_STREQ("Hi!", display.buffer());    
+}
+
 TEST(LCDTestGroup, PolymorphismTest) 
 {
     // Setup
