@@ -26,7 +26,7 @@ TEST(MailTestGroup, SharedPointerTest)
     {
         shared_ptr<Mail> copy = mail;  
         cout << "#counts(copy)=" << copy.use_count() << endl;    
-	// copy goes out of scope (use_count = 1)        
+	    // copy goes out of scope (use_count = 1)        
     }
     
     cout << "#counts(mail)=" << mail.use_count() << endl;     
