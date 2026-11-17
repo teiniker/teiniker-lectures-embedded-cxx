@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <string>
 #include <vector>
+#include <fstream>
 
 #include "data_service.h"
 
@@ -25,9 +26,20 @@ protected:
     }
 };
 
+// Helper: Creates a temporary file with the given content
+static string createFile(const string& name, const string& content)
+{
+    string   filename = testing::TempDir() + name;
+    ofstream file(filename);
+
+    file << content;
+
+    return filename;
+}
+
 TEST_F(FileServiceTest, DataFileTest) 
 {
-    service = new FileService("../data.txt");
+    service = new FileService(DATA_FILE);
     dataService = new DataService(service);
     
     vector<int> data = dataService->readData();
@@ -55,7 +67,7 @@ TEST_F(FileServiceTest, InvalidDataFileTest)
 
 TEST_F(FileServiceTest, ReadFileTest) 
 {
-    FileService service("../data.txt");
+    FileService service(DATA_FILE);
     string content = service.readFile();
     
     // Verify
@@ -74,4 +86,36 @@ TEST_F(FileServiceTest, FileNotFoundTest)
     
     // Verify
     EXPECT_THROW(service.readFile(), FileNotFound);
+}
+
+TEST_F(FileServiceTest, MultiLineDataFileTest) 
+{
+    string filename = createFile("multi.txt", "1,2\n3,4\n\n5\n");
+    service = new FileService(filename);
+    dataService = new DataService(service);
+    
+    vector<int> data = dataService->readData();
+    
+    // Verify
+    EXPECT_EQ(vector<int>({1, 2, 3, 4, 5}), data);
+}
+
+TEST_F(FileServiceTest, InvalidValueTest) 
+{
+    string filename = createFile("invalid.txt", "1,abc,3");
+    service = new FileService(filename);
+    dataService = new DataService(service);
+    
+    // Verify
+    EXPECT_THROW(dataService->readData(), DataProcessingException);
+}
+
+TEST_F(FileServiceTest, ValueOutOfRangeTest) 
+{
+    string filename = createFile("range.txt", "1,99999999999999999999");
+    service = new FileService(filename);
+    dataService = new DataService(service);
+    
+    // Verify
+    EXPECT_THROW(dataService->readData(), DataProcessingException);
 }

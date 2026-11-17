@@ -1,30 +1,30 @@
 #pragma once
 
 #include <string>
-#include <fstream> 
+#include <exception>
 
 class FileNotFound : public std::exception 
 {
-	private:
-		std::string _cause;
-		
-	public:
-		FileNotFound(const std::string& cause) : _cause{cause} {}
-		
-		const char* what() const noexcept
-		{
-			return _cause.c_str();
-		}
+private:
+    std::string _cause;
+
+public:
+    FileNotFound(const std::string& cause) : _cause{cause} {}
+
+    const char* what() const noexcept
+    {
+        return _cause.c_str();
+    }
 };
 
 class FileService 
 {
-	private:
-		std::string _filename;
- 
-	public:                
-		FileService(const std::string& filename);
+private:
+    std::string _filename;
 
-		std::string readFile() const;
-		void writeFile(const std::string& content);
- };
+public:                
+    FileService(const std::string& filename);
+
+    std::string readFile() const;
+    void writeFile(const std::string& content);
+};
