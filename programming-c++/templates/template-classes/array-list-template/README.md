@@ -24,8 +24,8 @@ type, e.g. `ArrayList<int, 16>` or `ArrayList<std::string, 4>`.
 classDiagram
     direction LR
     class ArrayList~T, N~ {
-        -_data: std::array~T, N~
-        -_size: size_t
+        -data:std::array~T, N~
+        -size:size_t
 
         -check_index(index: size_t, limit: size_t)$ void
         +size() size_t

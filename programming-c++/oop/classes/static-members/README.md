@@ -150,8 +150,8 @@ In UML, static members are shown **underlined**.
 classDiagram
     direction LR
     class IntegerSequence {
-        -_value:int$
-        -_id:int
+        -value:int$
+        -id:int
         +IntegerSequence()$
         +init(value:int)$ void
         +next()$ int

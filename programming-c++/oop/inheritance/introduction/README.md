@@ -160,7 +160,15 @@ Characteristics of abstract classes:
 * **Interface Specification**: Pure virtual functions are often used to define 
     an interface that derived classes must adhere to.
 
-![Virtual vs. Pure Virtual](figures/VirtualvsPureVirtual.png)
+Key differences between virtual and pure virtual functions:
+
+| Feature        | Virtual Function           | Pure Virtual Function         |
+|----------------|----------------------------|-------------------------------|
+| Implementation | Optional in base class     | Typically none in base class  |
+| Instantiation  | Allowed (no pure virtuals) | Not allowed (**abstract**)    |
+| Override       | Optional                   | **Required**, unless abstract |
+| Purpose        | Optional customization     | Define a strict interface     |
+| Syntax         | `virtual T f(P);`          | `virtual T f(P) = 0;`         |
 
 _Example:_ Abstract base class with pure virtual functions
 
@@ -235,6 +243,86 @@ to enhance type safety and code clarity:
 
 Each casting operator serves a specific purpose, enhancing code clarity and 
 reducing the likelihood of errors associated with type conversions.
+
+### static_cast
+
+`static_cast<>` is used for **well-defined conversions** which are checked
+at compile time, e.g. between numeric types.
+
+_Example:_ Convert between numeric types
+
+```C++
+int    sum   = 7;
+int    count = 2;
+double avg   = static_cast<double>(sum) / count;   // 3.5 instead of 3
+
+uint8_t low  = static_cast<uint8_t>(0x1234);       // 0x34 (truncation)
+```
+
+Without the cast, `sum / count` would be an integer division with the
+result `3`. The cast also documents that the truncation to `uint8_t` is
+intended.
+
+### dynamic_cast
+
+`dynamic_cast<>` checks **at runtime** whether a base class pointer really
+points to an object of a given derived class. If not, the result is
+`nullptr` (for references, `std::bad_cast` is thrown).
+The base class must be polymorphic (at least one virtual function).
+
+_Example:_ Safe downcast from `Display` to `LCD`
+
+```C++
+void reset(Display* display)
+{
+    LCD* lcd = dynamic_cast<LCD*>(display);
+
+    if (lcd != nullptr)     // Only LCD objects have a clear() method
+    {
+        lcd->clear();
+    }
+}
+```
+
+Note that `dynamic_cast<>` requires **Run-Time Type Information (RTTI)**.
+Many embedded projects disable RTTI (`-fno-rtti`) to save memory, so
+`dynamic_cast<>` is often not available there.
+
+### const_cast
+
+`const_cast<>` adds or removes `const` (or `volatile`). The typical use case
+is calling a legacy C function which does not use `const`, although it
+does not modify the data.
+
+_Example:_ Pass a `const` string to a legacy function
+
+```C++
+void legacy_print(char* text);     // Does not modify text
+
+const char* msg = "Hello";
+legacy_print(const_cast<char*>(msg));
+```
+
+**Modifying an object that was originally declared `const` through such a
+pointer is undefined behavior.**
+
+### reinterpret_cast
+
+`reinterpret_cast<>` treats a bit pattern as a **different, unrelated type**.
+In embedded systems, it is mainly used to access memory-mapped hardware
+registers at fixed addresses.
+
+_Example:_ Access a GPIO output register
+
+```C++
+volatile uint32_t* gpio_odr =
+    reinterpret_cast<volatile uint32_t*>(0x40020014);
+
+*gpio_odr |= (1u << 5);     // Set bit 5 (e.g. turn on an LED)
+```
+
+`reinterpret_cast<>` is the most dangerous cast, because the compiler does
+not check anything. Use it only where it is unavoidable.
 
 
 ## References
