@@ -9,7 +9,7 @@ User::User(const int id, const string& username, const string& password)
 }
 
 // ---[*]-> Mail		
-void User::addMail(Mail* mail)
+void User::add_mail(Mail* mail)
 {
 	_mails.push_back(mail);
 }
@@ -19,7 +19,7 @@ Mail* User::mail(int index) const
 	return _mails[index];
 }
 
-size_t User::numberOfMails(void) const
+size_t User::number_of_mails(void) const
 {
 	return _mails.size();
 }	

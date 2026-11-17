@@ -22,7 +22,7 @@ class User
 		std::string password() const { return _password; }
 		
 		// Association --[1]-> Mail
-		void addMail(Mail* mail);
+		void add_mail(Mail* mail);
 		Mail* mail(int index) const; 
-		size_t numberOfMails(void) const;
+		size_t number_of_mails(void) const;
  };

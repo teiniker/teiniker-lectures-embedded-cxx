@@ -1,22 +1,14 @@
 #include <simple_string.h>
 #include <cstdio>
+#include <cstring>
 
 using namespace std;
 
 SimpleString::SimpleString(const char* data)
 {
-	_size = 0;
-	while (data[_size] != '\0')
-	{
-		_size++;
-	}
-
+	_size = strlen(data);
 	_data = new char[_size + 1];
-	for (size_t i = 0; i < _size; i++)
-	{
-		_data[i] = data[i];
-	}
-	_data[_size] = '\0';
+	strcpy(_data, data);
 }
 
 // Copy Constructor
@@ -26,11 +18,7 @@ SimpleString::SimpleString(const SimpleString& old)
 
 	_size = old._size;
 	_data = new char[_size + 1];
-	for (size_t i = 0; i < _size; i++)
-	{
-		_data[i] = old._data[i];
-	}
-	_data[_size] = '\0';
+	strcpy(_data, old._data);
 }
 
 SimpleString::~SimpleString()
@@ -46,14 +34,10 @@ SimpleString& SimpleString::operator=(const SimpleString& other)
 	if (this != &other) // Self-assignment check
 	{
 		// Release existing resource
-		delete[] _data;		
+		delete[] _data;
 		_size = other._size;
 		_data = new char[_size + 1];
-		for (size_t i = 0; i < _size; i++)
-		{
-			_data[i] = other._data[i];
-		}
-		_data[_size] = '\0';
+		strcpy(_data, other._data);
 	}
 	return *this;
 }

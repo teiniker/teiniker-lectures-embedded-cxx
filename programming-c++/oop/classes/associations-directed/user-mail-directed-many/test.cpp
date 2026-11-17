@@ -12,8 +12,8 @@ protected:
     void SetUp() override 
     {
         user = new User(7, "homer", "c3R1ZGVudA");
-        user->addMail(new Mail("homer.simpson@springfield.com"));
-        user->addMail(new Mail("homer.simpson@powerplant.com"));
+        user->add_mail(new Mail("homer.simpson@springfield.com"));
+        user->add_mail(new Mail("homer.simpson@powerplant.com"));
     }
 
     void TearDown() override 
@@ -35,7 +35,7 @@ TEST_F(UserTest, ConstructorTest)
 TEST_F(UserTest, NavigationTest) 
 {
     // Verify
-    EXPECT_EQ(2, user->numberOfMails());
+    EXPECT_EQ(2, user->number_of_mails());
     EXPECT_EQ("homer.simpson@springfield.com", user->mail(0)->address());
     EXPECT_EQ("homer.simpson@powerplant.com", user->mail(1)->address());
 }

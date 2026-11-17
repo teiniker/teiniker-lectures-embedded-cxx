@@ -25,11 +25,7 @@ SimpleString& SimpleString::operator=(const SimpleString& other)
 		delete[] _data;		
 		_size = other._size;
 		_data = new char[_size + 1];
-		for (size_t i = 0; i < _size; i++)
-		{
-			_data[i] = other._data[i];
-		}
-		_data[_size] = '\0';
+		strcpy(_data, other._data);
 	}
 	return *this;
 }
@@ -44,9 +40,8 @@ SimpleString& SimpleString::operator=(const SimpleString& other)
 
 * **Allocate new buffer**: We are creating a new chunk of memory.
 
-* **Copy characters**: Manual copy again (like in the copy constructor).
-
-* **Add the null terminator**: To keep it a valid C-string.
+* **Copy characters**: Copy the characters using `strcpy()` (like in the
+	copy constructor), which also copies the null terminator `'\0'`.
 
 * **Return this**: This allows assignments to chain: `a = b = c;`
 
