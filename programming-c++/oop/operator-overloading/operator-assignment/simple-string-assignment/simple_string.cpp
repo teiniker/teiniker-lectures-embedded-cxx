@@ -16,6 +16,7 @@ SimpleString::SimpleString(const SimpleString& old)
 {
 	printf(">> Called: Copy Constructor\n");
 
+	// Copy data from old object
 	_size = old._size;
 	_data = new char[_size + 1];
 	strcpy(_data, old._data);
@@ -35,6 +36,7 @@ SimpleString& SimpleString::operator=(const SimpleString& other)
 	{
 		// Release existing resource
 		delete[] _data;
+		// Copy data from other object
 		_size = other._size;
 		_data = new char[_size + 1];
 		strcpy(_data, other._data);
