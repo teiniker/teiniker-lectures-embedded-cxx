@@ -3,10 +3,10 @@
 * [Introduction](introduction/README.md) 
 
 * Throwing Exceptions:
-    * Example: [input-validation](input-validation/)
+    * Demo: [input-validation](input-validation/)
 
 * Catching Exceptions:
-    * Example: [data-service](data-service/)  
+    * Demo: [data-service](data-service/)  
     * Exercise: [controller](controller-exercise/) ([Model Solution](controller/))
 
 *Egon Teiniker, 2024-2026, GPL v3.0*

@@ -13,179 +13,238 @@ robust and easier to maintain.
 A C++ exception is a response to an exceptional circumstance that arises 
 while a program is running.
 
-Exceptions provide a way to transfer control from one part of a program to another. 
-C++ exception handling is built upon three keywords: try, catch, and throw:
+Exceptions provide a way to transfer control from one part of a program 
+to another. 
+C++ exception handling is built upon three keywords:
 
 * **throw**: A program throws an exception when a problem shows up. 
-	This is done using a throw keyword.
+
+* **try**: A try block encloses code that may throw exceptions. 
+    It is followed by one or more catch blocks.
 
 * **catch**: A program catches an exception with an exception handler 
-	at the place in a program where we want to handle the problem. 
-	The `catch` keyword indicates the catching of an exception.
+    at the place in a program where we want to handle the problem. 
 
-* **try**: A try block identifies a block of code for which particular 
-	exceptions will be activated. 
-	It's followed by one or more catch blocks.
-
-
-We can list down multiple `catch` statements to catch different type of 
-exceptions in case our `try` block raises more than one exception in 
-different situations.
+We can list multiple `catch` blocks to catch different types of 
+exceptions, in case our `try` block can throw more than one kind of
+exception.
 
 ```C++
-	try 
-	{
-		// protected code
-	} 
-	catch( ExceptionType1 e ) 
-	{
-		// catch block
-	} 
-	catch( ExceptionType2 e ) 
-	{
-		// catch block
-	} 
-	catch( ExceptionTypeN e ) 
-	{
-		// catch block
-	}
-```		
+try 
+{
+    // protected code
+} 
+catch (const ExceptionType1& e) 
+{
+    // catch block
+} 
+catch (const ExceptionType2& e) 
+{
+    // catch block
+} 
+catch (const ExceptionTypeN& e) 
+{
+    // catch block
+}
+```
+
+Exceptions should be **caught by reference** (usually `const&`). Catching
+by value copies the exception object, and if a derived exception is
+caught by a base class type, the derived part is cut off (**slicing**).
 
 
 ## Standard Exceptions
 
-C++ provides a list of [standard exceptions](https://en.cppreference.com/w/cpp/error/exception) 
-defined in <stdexcept> which we can use in our programs.
+C++ provides a list of
+[standard exceptions](https://en.cppreference.com/w/cpp/error/exception)
+which we can use in our programs. They are declared in different headers:
+`std::exception` in `<exception>`, `std::bad_alloc` in `<new>`,
+`std::bad_cast` and `std::bad_typeid` in `<typeinfo>`, and
+`std::logic_error`, `std::runtime_error` and their subclasses in
+`<stdexcept>`.
 
-* `std::exception`: An exception and parent class of all the standard C++ exceptions.
+* `std::exception`: Base class of all standard C++ exceptions.
 
-	* `std::bad_alloc`: This can be thrown by new.
+    * `std::bad_alloc`: Thrown by `new` if memory allocation fails.
 
-	* `std::bad_cast`: This can be thrown by dynamic_cast.
+    * `std::bad_cast`: Thrown by `dynamic_cast` for references.
 
-	* `std::bad_typeid`: This can be thrown by typeid.
+    * `std::bad_typeid`: Thrown by `typeid` for a null pointer.
 
-	* `std::bad_exception`: This is useful device to handle unexpected exceptions in a C++ program.
+    * `std::logic_error`: An error that theoretically can be detected by
+        reading the code.
+        * `std::domain_error`: A mathematically invalid domain is used.
+        * `std::invalid_argument`: A function argument is invalid.
+        * `std::length_error`: A size exceeds the maximum size, e.g.
+            `max_size()` of a `std::string` or `std::vector`.
+        * `std::out_of_range`: An index is out of range, e.g. thrown by
+            `at()` of `std::vector` and `std::string`, or by
+            `std::bitset::test()`.
 
-	* `std::logic_failure`: An exception that theoretically can be detected by reading the code.
-		* `std::domain_error`: This is an exception thrown when a mathematically invalid domain is used.
-		* `std::invalid_argument`: This is thrown due to invalid arguments.
-		* `std::length_error`: This is thrown when a too big `std::string` is created.
-		* `std::out_of_range`: This can be thrown by the 'at' method, for example a `std::vector` and `std::bitset<>::operator[]()`
-
-	* `std::runtime_error`: An exception that theoretically cannot be detected by reading the code.
-		* `std::overflow_error`: This is thrown if a mathematical overflow occurs.
-		* `std::range_error`: This is occurred when you try to store a value which is out of range.
-		* `std::underflow_error`: This is thrown if a mathematical underflow occurs.
-	
+    * `std::runtime_error`: An error that theoretically cannot be
+        detected by reading the code.
+        * `std::overflow_error`: A mathematical overflow occurs.
+        * `std::range_error`: A result cannot be represented in the
+            destination type.
+        * `std::underflow_error`: A mathematical underflow occurs.
+    
 All exceptions generated by the standard library inherit from 
-[std::exception](http://www.cplusplus.com/reference/exception/exception/).
-Therefore, all standard exceptions can be caught by catching this type by reference.
+[std::exception](https://en.cppreference.com/w/cpp/error/exception).
+Therefore, all standard exceptions can be caught by catching this type
+by reference.
 
 ```C++
-class exception {
+class exception 
+{
 public:
-	exception () noexcept;
-	exception (const exception&) noexcept;
-	exception& operator= (const exception&) noexcept;
-	virtual ~exception();
-	virtual const char* what() const noexcept;
+    exception() noexcept;
+    exception(const exception&) noexcept;
+    exception& operator=(const exception&) noexcept;
+    virtual ~exception();
+    virtual const char* what() const noexcept;
+};
+```
+
+By declaring a function or a method as **noexcept**, we specify that it
+does not throw an exception. If an exception escapes from a `noexcept`
+function anyway, `std::terminate()` is called and the program ends
+(the stack is not necessarily unwound).
+
+The `noexcept` specification is equivalent to `noexcept(true)`. 
+**throw()** was equivalent to `noexcept(true)`, but it was deprecated
+with C++11 and removed with C++20. 
+
+In contrast, `noexcept(false)` means that the function may throw an
+exception. Since C++17, the `noexcept` specification is part of the
+function type, but it cannot be used for function overloading. 
+
+            
+## Defining Exceptions
+
+The simplest way of defining an exception is to define a class
+specifically for a kind of error and throw an object of it.
+
+```C++
+class RangeError 
+{
+};
+
+const int max = 10;
+
+void f(int n)
+{
+    if (n < 0 || max < n)
+    {
+        throw RangeError{};
+    }
+    //...
 }
 ```
 
-By declaring a function or a method as **noexcept**, we specify that these 
-does not throw an exception and if they throw, we do not care and let the 
-program just crash.
-			
-The `noexcept` specification is equivalent to the `noexcept(true)` specification. 
-**throw()** is equivalent to `noexcept(true)` but was deprecated with C++11 and 
-will be removed with C++20. 
-
-In contrast, `noexcept(false)` means that the function may throw an exception. 
-The `noexcept` specification is part of the function type but can not be used 
-for function overloading. 
-
-			
-## Defining Exceptions
-
-We can define our own exceptions by inheriting and overriding exception class functionality. 
-
-The simplest way of defining an exception is to define a class specifically for 
-a kind of error and throw that.
-
-```C++
-	class RangeError 
-	{
-	};
-
-	void f(int n)
-	{
-	 if (n<0 || max<n) 
-	 	throw RangeError;
-	  //...
-	}
-```
-
 An exception can carry information about the error it represents. 
-Its type represents the kind of error, and whatever data it holds represents the 
-particular occurrence of that error.
+Its type represents the kind of error, and whatever data it holds
+represents the particular occurrence of that error.
+
+We can define our own exceptions by inheriting from `std::exception` and
+overriding its `what()` method.
 
 ```C++
 class FileNotFound : public std::exception 
 {
-	private:
-		std::string _cause;
-		
-	public:
-		FileNotFound(const std::string& cause) : _cause{cause} {}
-		
-		const char* what() const noexcept
-		{
-			return _cause.c_str();
-		}
+private:
+    std::string _cause;
+        
+public:
+    explicit FileNotFound(const std::string& cause) : _cause{cause} {}
+        
+    const char* what() const noexcept override
+    {
+        return _cause.c_str();
+    }
 };
 ```
 
-**what()** is a public method provided by **exception** class and it has been 
-overridden by all the child exception classes. 
-This returns the cause of an exception.
+**what()** is a public method provided by the **exception** class, and it
+is overridden by all the child exception classes. 
+It returns the cause of an exception.
+
+An even simpler way is to inherit from `std::runtime_error` (or
+`std::logic_error`), which already stores the message and implements
+`what()`:
+
+```C++
+class FileNotFound : public std::runtime_error 
+{
+public:
+    explicit FileNotFound(const std::string& filename)
+        : std::runtime_error{"File not found: " + filename}
+    {
+    }
+};
+```
 
 
 ## Throwing Exceptions
 
-Exceptions can be thrown anywhere within a code block using throw statement. 
-The operand of the throw statement determines a type for the exception and 
-can be any expression and the type of the result of the expression determines 
-the type of exception thrown.
+Exceptions can be thrown anywhere within a code block using a `throw`
+statement. The operand of the `throw` statement can be any expression,
+and the type of its result determines the type of the exception thrown.
 
 ```C++
-	if(id < 0)
-		throw invalid_argument("Invalid id!");
+if (id < 0)
+{
+    throw std::invalid_argument("Invalid id!");
+}
 ```
 
 
 ## Catching Exceptions
 
-The catch block following the try block catches any exception. You can specify what 
-type of exception you want to catch and this is determined by the exception declaration 
-that appears in parentheses following the keyword catch.
+A `catch` block only catches exceptions of the type declared in its
+parentheses, or of a type derived from it. 
 
 ```C++
-	try 
-	{
-	   // protected code
-	} 
-	catch( ExceptionName e ) 
-	{
-	  // code to handle ExceptionName exception
-	}
+try 
+{
+    // protected code
+} 
+catch (const std::invalid_argument& e)  // Most specific type first
+{
+    // handle invalid_argument
+}
+catch (const std::logic_error& e)       // Base class of invalid_argument
+{
+    // handle all other logic errors
+}
+catch (...)                             // Catches any exception
+{
+    // handle all other exceptions
+}
+```
+
+* The `catch` blocks are checked **in order**, and the first matching
+    block is executed. Therefore, **derived types must be caught before
+    their base types**, otherwise the specific handler is never reached.
+
+* `catch (...)` catches **any exception**, but we do not get access to
+    the exception object.
+
+Inside a `catch` block, `throw;` (without an operand) **rethrows** the
+current exception, e.g. after logging it:
+
+```C++
+catch (const std::exception& e) 
+{
+    log(e.what());
+    throw;      // Rethrow the original exception
+}
 ```
 
 
 ## References
 
-* Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
-	* Chapter 13: Exception Handling
+* Bjarne Stroustrup. **The C++ Programming Language**. Pearson 4th Edition 2013
+    * Chapter 13: Exception Handling
 
 * [C++ Exception Handling](https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm)
 
