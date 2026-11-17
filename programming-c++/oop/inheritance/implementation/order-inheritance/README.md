@@ -8,7 +8,47 @@ or Super class.
 
 ## Implementing Inheritance
 
-![Class Diagram](figures/ClassDiagram-Order-Inheritance.png)
+```mermaid
+classDiagram
+    direction LR
+
+    class Entity {
+        -id:int
+        +Entity(id:int)$
+        +id() int
+    }
+
+    class Order {
+        -name:string
+        +Order(id:int, name:string)$
+        +name() string
+        +addLine(line:OrderLine) void
+        +line(index:int) OrderLine
+        +numberOfLines() int
+    }
+
+    class OrderLine {
+        -quantity:int
+        +OrderLine(id:int, quantity:int, product:Product)$
+        +quantity() int
+        +product() Product
+    }
+
+    class Product {
+        -description:string
+        -price:long
+        +Product(id:int, description:string, price:long)$
+        +description() string
+        +price() long
+    }
+
+    Entity <|-- Order
+    Entity <|-- OrderLine
+    Entity <|-- Product
+
+    Order --> "*" OrderLine : lines
+    OrderLine --> "0..1" Product : product
+```
 
 Given a base class named `Entity` which implements a common attribute
 and its accessor methods.
