@@ -28,5 +28,5 @@ void LCD::print(char c)
 void LCD::print(const char* c_ptr)
 {
 	strcpy(_buffer + _index, c_ptr);
-	_index += sizeof(c_ptr);
+	_index += std::strlen(c_ptr);
 }
