@@ -23,13 +23,6 @@ public:
 	bool operator>(const SimpleString& other) const;
 	bool operator>=(const SimpleString& other) const;
 
- 	size_t size() const
-	{
-		return _size;
-	}
-
-	const char* c_str() const
-	{
-		return _data;
-	}
+ 	size_t size() const { return _size; }
+	const char* c_str() const { return _data; }
 };
