@@ -1,7 +1,7 @@
 # Exception Handling
 
 Exception handling in C++ is a mechanism that allows a program to 
-detect and respond to anomalous or exceptional conditions—such 
+detect and respond to anomalous or exceptional conditions, such 
 as runtime errors without crashing. 
 
 It provides a **structured way to handle errors**, making the code more 
