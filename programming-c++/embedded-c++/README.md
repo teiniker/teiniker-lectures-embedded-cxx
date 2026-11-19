@@ -77,8 +77,8 @@ Since cleanup is automatic, it’s extremely hard to leak memory or forget to re
 
 ### Templates
 
-Templates have no overhead and can be thought of as a more powerful version of 
-a pre-processor macro. 
+Templates have no overhead and can be thought of as a **more powerful version of 
+a pre-processor** macro. 
 However, incorrect/careless use of templates can cause a huge increase in code 
 size. Also be careful of overusing them, too much templating makes code very 
 unreadable.
